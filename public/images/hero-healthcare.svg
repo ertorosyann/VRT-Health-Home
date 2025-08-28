@@ -1,0 +1,92 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#gradient1)"/>
+  
+  <!-- Abstract Medical Shapes -->
+  <g opacity="0.1">
+    <!-- DNA Helix -->
+    <path d="M100 200 Q300 150 500 200 T900 200 Q1100 150 1300 200 T1700 200" stroke="#3B82F6" stroke-width="3" fill="none"/>
+    <path d="M100 250 Q300 300 500 250 T900 250 Q1100 300 1300 250 T1700 250" stroke="#3B82F6" stroke-width="3" fill="none"/>
+    <circle cx="100" cy="200" r="4" fill="#3B82F6"/>
+    <circle cx="300" cy="150" r="4" fill="#3B82F6"/>
+    <circle cx="500" cy="200" r="4" fill="#3B82F6"/>
+    <circle cx="700" cy="150" r="4" fill="#3B82F6"/>
+    <circle cx="900" cy="200" r="4" fill="#3B82F6"/>
+    <circle cx="1100" cy="150" r="4" fill="#3B82F6"/>
+    <circle cx="1300" cy="200" r="4" fill="#3B82F6"/>
+    <circle cx="1500" cy="150" r="4" fill="#3B82F6"/>
+    <circle cx="1700" cy="200" r="4" fill="#3B82F6"/>
+    
+    <!-- Medical Crosses -->
+    <g transform="translate(200, 400)">
+      <rect x="-15" y="-2" width="30" height="4" fill="#10B981"/>
+      <rect x="-2" y="-15" width="4" height="30" fill="#10B981"/>
+    </g>
+    <g transform="translate(600, 350)">
+      <rect x="-12" y="-2" width="24" height="4" fill="#10B981"/>
+      <rect x="-2" y="-12" width="4" height="24" fill="#10B981"/>
+    </g>
+    <g transform="translate(1000, 450)">
+      <rect x="-18" y="-2" width="36" height="4" fill="#10B981"/>
+      <rect x="-2" y="-18" width="4" height="36" fill="#10B981"/>
+    </g>
+    <g transform="translate(1400, 380)">
+      <rect x="-14" y="-2" width="28" height="4" fill="#10B981"/>
+      <rect x="-2" y="-14" width="4" height="28" fill="#10B981"/>
+    </g>
+    
+    <!-- Heartbeat Line -->
+    <path d="M100 600 Q200 550 300 600 T500 600 Q600 650 700 600 T900 600 Q1000 550 1100 600 T1300 600 Q1400 650 1500 600 T1700 600" stroke="#EF4444" stroke-width="2" fill="none"/>
+    
+    <!-- Pills -->
+    <ellipse cx="300" cy="700" rx="25" ry="8" fill="#8B5CF6" opacity="0.6"/>
+    <ellipse cx="800" cy="680" rx="20" ry="6" fill="#8B5CF6" opacity="0.6"/>
+    <ellipse cx="1200" cy="720" rx="22" ry="7" fill="#8B5CF6" opacity="0.6"/>
+    
+    <!-- Stethoscope -->
+    <path d="M400 800 Q450 750 500 800 T600 800" stroke="#6B7280" stroke-width="3" fill="none"/>
+    <circle cx="400" cy="800" r="8" fill="#6B7280"/>
+    <circle cx="600" cy="800" r="8" fill="#6B7280"/>
+    
+    <!-- Microscope -->
+    <circle cx="1000" cy="800" r="15" fill="#F59E0B" opacity="0.7"/>
+    <rect x="990" y="800" width="20" height="40" fill="#F59E0B" opacity="0.7"/>
+    <rect x="985" y="840" width="30" height="5" fill="#F59E0B" opacity="0.7"/>
+    
+    <!-- Test Tubes -->
+    <rect x="1400" y="750" width="8" height="60" rx="4" fill="#06B6D4" opacity="0.6"/>
+    <rect x="1420" y="760" width="8" height="50" rx="4" fill="#06B6D4" opacity="0.6"/>
+    <rect x="1440" y="770" width="8" height="40" rx="4" fill="#06B6D4" opacity="0.6"/>
+    
+    <!-- Floating Bubbles -->
+    <circle cx="150" cy="300" r="3" fill="#60A5FA" opacity="0.4"/>
+    <circle cx="400" cy="250" r="2" fill="#60A5FA" opacity="0.4"/>
+    <circle cx="650" cy="320" r="4" fill="#60A5FA" opacity="0.4"/>
+    <circle cx="900" cy="280" r="3" fill="#60A5FA" opacity="0.4"/>
+    <circle cx="1150" cy="310" r="2" fill="#60A5FA" opacity="0.4"/>
+    <circle cx="1400" cy="270" r="4" fill="#60A5FA" opacity="0.4"/>
+    <circle cx="1650" cy="330" r="3" fill="#60A5FA" opacity="0.4"/>
+    
+    <!-- Abstract Waves -->
+    <path d="M0 900 Q480 850 960 900 T1920 900" stroke="#3B82F6" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M0 950 Q480 900 960 950 T1920 950" stroke="#3B82F6" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M0 1000 Q480 950 960 1000 T1920 1000" stroke="#3B82F6" stroke-width="1" fill="none" opacity="0.3"/>
+  </g>
+  
+  <!-- Subtle Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E5E7EB" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0F9FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E0F2FE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0FDF4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg> 

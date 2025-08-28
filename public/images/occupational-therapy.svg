@@ -1,0 +1,83 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ot-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dcfce7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#ot-bg)"/>
+  
+  <!-- Occupational Therapist -->
+  <circle cx="100" cy="80" r="20" fill="#fbbf24"/>
+  <rect x="80" y="100" width="40" height="50" fill="#10b981" rx="6"/>
+  <rect x="90" y="110" width="20" height="12" fill="white" rx="3"/>
+  
+  <!-- Patient -->
+  <circle cx="280" cy="90" r="18" fill="#fbbf24"/>
+  <rect x="262" y="108" width="36" height="45" fill="#8b5cf6" rx="6"/>
+  <rect x="272" y="118" width="16" height="10" fill="white" rx="2"/>
+  
+  <!-- Daily Living Activities -->
+  <!-- Cooking -->
+  <rect x="60" y="180" width="50" height="40" fill="#f59e0b" rx="4"/>
+  <circle cx="85" cy="200" r="8" fill="#ef4444"/>
+  <path d="M 85 192 L 85 208" stroke="#ef4444" stroke-width="2"/>
+  <path d="M 77 200 L 93 200" stroke="#ef4444" stroke-width="2"/>
+  
+  <!-- Dressing -->
+  <rect x="130" y="180" width="50" height="40" fill="#f59e0b" rx="4"/>
+  <rect x="145" y="190" width="20" height="20" fill="#8b5cf6" rx="2"/>
+  <rect x="150" y="195" width="10" height="10" fill="white" rx="1"/>
+  
+  <!-- Bathing -->
+  <rect x="200" y="180" width="50" height="40" fill="#f59e0b" rx="4"/>
+  <path d="M 210 200 Q 225 190 240 200" stroke="#3b82f6" stroke-width="3" fill="none"/>
+  <circle cx="225" cy="200" r="3" fill="#3b82f6"/>
+  
+  <!-- Home Safety -->
+  <rect x="270" y="180" width="50" height="40" fill="#f59e0b" rx="4"/>
+  <path d="M 280 190 L 300 190 L 290 210 Z" fill="#ef4444"/>
+  <circle cx="295" cy="185" r="2" fill="#ef4444"/>
+  
+  <!-- Adaptive Equipment -->
+  <!-- Grab Bar -->
+  <rect x="80" y="250" width="60" height="8" fill="#6b7280" rx="4"/>
+  <rect x="85" y="252" width="50" height="4" fill="#9ca3af" rx="2"/>
+  
+  <!-- Reacher -->
+  <rect x="160" y="250" width="8" height="40" fill="#6b7280" rx="4"/>
+  <path d="M 164 250 L 164 270 L 180 270 L 180 250" fill="#6b7280"/>
+  
+  <!-- Button Hook -->
+  <rect x="240" y="250" width="40" height="8" fill="#6b7280" rx="4"/>
+  <path d="M 260 250 L 260 240 L 265 240 L 265 250" fill="#6b7280"/>
+  
+  <!-- Home Environment -->
+  <path d="M 320 200 L 370 200 L 370 250 L 320 250 Z" fill="#10b981"/>
+  <rect x="330" y="210" width="15" height="20" fill="#8b5cf6"/>
+  <rect x="355" y="210" width="15" height="20" fill="#8b5cf6"/>
+  <path d="M 345 200 L 345 190 L 355 190 L 355 200" fill="#10b981"/>
+  
+  <!-- Progress Tracking -->
+  <rect x="320" y="80" width="60" height="40" fill="white" rx="4"/>
+  <rect x="330" y="90" width="40" height="20" fill="#f3f4f6"/>
+  <path d="M 330 100 L 340 95 L 350 98 L 370 92" stroke="#10b981" stroke-width="2" fill="none"/>
+  <circle cx="340" cy="95" r="2" fill="#10b981"/>
+  <circle cx="350" cy="98" r="2" fill="#10b981"/>
+  <circle cx="370" cy="92" r="2" fill="#10b981"/>
+  
+  <!-- Activity Schedule -->
+  <rect x="50" y="80" width="40" height="60" fill="white" rx="4"/>
+  <rect x="55" y="85" width="30" height="3" fill="#10b981"/>
+  <rect x="55" y="90" width="25" height="3" fill="#10b981"/>
+  <rect x="55" y="95" width="30" height="3" fill="#10b981"/>
+  <rect x="55" y="100" width="20" height="3" fill="#10b981"/>
+  <rect x="55" y="105" width="30" height="3" fill="#10b981"/>
+  <rect x="55" y="110" width="25" height="3" fill="#10b981"/>
+  <rect x="55" y="115" width="30" height="3" fill="#10b981"/>
+  <rect x="55" y="120" width="20" height="3" fill="#10b981"/>
+  <rect x="55" y="125" width="30" height="3" fill="#10b981"/>
+  <rect x="55" y="130" width="25" height="3" fill="#10b981"/>
+</svg> 

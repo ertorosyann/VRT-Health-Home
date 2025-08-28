@@ -1,0 +1,57 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="care-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#care-bg)"/>
+  
+  <!-- Caregiver -->
+  <circle cx="120" cy="80" r="22" fill="#fbbf24"/>
+  <rect x="98" y="102" width="44" height="55" fill="#3b82f6" rx="6"/>
+  <rect x="108" y="112" width="24" height="12" fill="white" rx="3"/>
+  
+  <!-- Patient -->
+  <circle cx="280" cy="100" r="20" fill="#fbbf24"/>
+  <rect x="260" y="120" width="40" height="50" fill="#8b5cf6" rx="6"/>
+  <rect x="270" y="130" width="20" height="10" fill="white" rx="2"/>
+  
+  <!-- Personal Care Activities -->
+  <!-- Bathing -->
+  <rect x="80" y="200" width="60" height="40" fill="#e5e7eb" rx="4"/>
+  <circle cx="110" cy="220" r="8" fill="#3b82f6"/>
+  <path d="M 110 212 L 110 228" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M 102 220 L 118 220" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Dressing -->
+  <rect x="160" y="200" width="60" height="40" fill="#e5e7eb" rx="4"/>
+  <rect x="175" y="210" width="30" height="20" fill="#8b5cf6" rx="2"/>
+  <rect x="180" y="215" width="20" height="10" fill="white" rx="1"/>
+  
+  <!-- Meal Preparation -->
+  <rect x="240" y="200" width="60" height="40" fill="#e5e7eb" rx="4"/>
+  <circle cx="270" cy="220" r="8" fill="#ef4444"/>
+  <path d="M 270 212 L 270 228" stroke="#ef4444" stroke-width="2"/>
+  <path d="M 262 220 L 278 220" stroke="#ef4444" stroke-width="2"/>
+  
+  <!-- Companionship -->
+  <path d="M 320 200 Q 340 180 360 200" stroke="#10b981" stroke-width="3" fill="none"/>
+  <path d="M 320 210 Q 340 230 360 210" stroke="#10b981" stroke-width="3" fill="none"/>
+  
+  <!-- Care Connection -->
+  <path d="M 142 157 L 238 140" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Home Environment -->
+  <path d="M 50 280 L 100 250 L 150 280 L 150 300 L 50 300 Z" fill="#10b981"/>
+  <rect x="70" y="290" width="15" height="10" fill="#8b5cf6"/>
+  <rect x="105" y="290" width="15" height="10" fill="#8b5cf6"/>
+  <path d="M 75 250 L 75 240 L 95 240 L 95 250" fill="#10b981"/>
+  
+  <!-- Medical Equipment -->
+  <rect x="320" y="80" width="40" height="30" fill="#f59e0b" rx="4"/>
+  <circle cx="340" cy="95" r="6" fill="white"/>
+  <rect x="340" y="80" width="2" height="30" fill="white"/>
+</svg> 

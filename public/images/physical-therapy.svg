@@ -1,0 +1,63 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="therapy-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bfdbfe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#therapy-bg)"/>
+  
+  <!-- Physical Therapist -->
+  <circle cx="100" cy="80" r="20" fill="#fbbf24"/>
+  <rect x="80" y="100" width="40" height="50" fill="#3b82f6" rx="6"/>
+  <rect x="85" y="110" width="30" height="12" fill="white" rx="3"/>
+  
+  <!-- Patient -->
+  <circle cx="200" cy="100" r="18" fill="#fbbf24"/>
+  <rect x="182" y="118" width="36" height="45" fill="#8b5cf6" rx="6"/>
+  
+  <!-- Exercise Equipment -->
+  <!-- Resistance Bands -->
+  <ellipse cx="300" cy="80" rx="40" ry="15" fill="none" stroke="#ef4444" stroke-width="3"/>
+  <ellipse cx="300" cy="80" rx="35" ry="12" fill="none" stroke="#ef4444" stroke-width="2"/>
+  
+  <!-- Weights -->
+  <rect x="320" y="120" width="20" height="40" fill="#6b7280" rx="4"/>
+  <rect x="325" y="125" width="10" height="30" fill="#9ca3af"/>
+  <rect x="350" y="120" width="20" height="40" fill="#6b7280" rx="4"/>
+  <rect x="355" y="125" width="10" height="30" fill="#9ca3af"/>
+  
+  <!-- Exercise Ball -->
+  <circle cx="150" cy="220" r="30" fill="#10b981"/>
+  <circle cx="150" cy="220" r="25" fill="#34d399"/>
+  
+  <!-- Balance Board -->
+  <ellipse cx="250" cy="220" rx="35" ry="8" fill="#f59e0b"/>
+  <ellipse cx="250" cy="220" rx="30" ry="6" fill="#fbbf24"/>
+  
+  <!-- Stretching Person -->
+  <circle cx="80" cy="200" r="15" fill="#fbbf24"/>
+  <rect x="65" y="215" width="30" height="40" fill="#8b5cf6" rx="6"/>
+  <path d="M 65 215 Q 45 235 65 255" stroke="#8b5cf6" stroke-width="3" fill="none"/>
+  
+  <!-- Progress Chart -->
+  <rect x="300" y="200" width="80" height="60" fill="white" rx="4"/>
+  <rect x="310" y="210" width="60" height="40" fill="#f3f4f6"/>
+  <path d="M 310 230 L 330 220 L 350 225 L 370 215" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <circle cx="330" cy="220" r="3" fill="#3b82f6"/>
+  <circle cx="350" cy="225" r="3" fill="#3b82f6"/>
+  <circle cx="370" cy="215" r="3" fill="#3b82f6"/>
+  
+  <!-- Movement Arrows -->
+  <path d="M 180 150 L 200 150" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <path d="M 200 150 L 220 150" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <path d="M 220 150 L 240 150" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+  </defs>
+</svg> 
