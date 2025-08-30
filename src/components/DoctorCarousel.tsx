@@ -132,7 +132,7 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
         >
           {doctors.map((doctor, index) => (
             <div key={doctor.id} className="w-full flex-shrink-0">
-              <div className="relative h-[70vh] w-full">
+              <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] w-full">
                 <Image
                   src={doctor.image}
                   alt={doctor.alt}
@@ -143,41 +143,41 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
                 {/* Enhanced Overlay with doctor info */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent transition-opacity duration-700">
                   <div className="absolute inset-0 flex items-center">
-                    <div className="w-full md:w-2/3 p-6 md:p-12 text-white animate-fade-in">
-                      <h3 className="text-2xl md:text-3xl font-bold mb-2">{doctor.name}</h3>
-                      <p className="text-lg md:text-xl text-gray-200 mb-4">{doctor.specialty}</p>
-                      <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-full md:w-2/3 p-4 sm:p-6 md:p-8 lg:p-12 text-white animate-fade-in">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">{doctor.name}</h3>
+                      <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-3 sm:mb-4">{doctor.specialty}</p>
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
                         <div className="flex items-center space-x-2">
-                          <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                           </svg>
-                          <span className="text-sm">4.9 (120 reviews)</span>
+                          <span className="text-xs sm:text-sm">4.9 (120 reviews)</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-sm">Available Today</span>
+                          <span className="text-xs sm:text-sm">Available Today</span>
                         </div>
                       </div>
                       
                       {/* Additional Doctor Information */}
-                      <div className="space-y-3">
-                        <p className="text-gray-200 text-sm leading-relaxed max-w-md">
+                      <div className="space-y-2 sm:space-y-3">
+                        <p className="text-gray-200 text-xs sm:text-sm leading-relaxed max-w-md">
                           Experienced medical professional with over 10 years of practice. Specializing in advanced diagnostic procedures and patient care.
                         </p>
-                        <div className="flex items-center space-x-6">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-6">
                           <div className="flex items-center space-x-2">
-                            <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
-                            <span className="text-sm text-gray-300">Board Certified</span>
+                            <span className="text-xs sm:text-sm text-gray-300">Board Certified</span>
                           </div>
                           <div className="flex items-center space-x-2">
-                            <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
-                            <span className="text-sm text-gray-300">10+ Years Experience</span>
+                            <span className="text-xs sm:text-sm text-gray-300">10+ Years Experience</span>
                           </div>
                         </div>
                       </div>
@@ -193,10 +193,10 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
         <button
           onClick={prevSlide}
           disabled={isAnimating}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 disabled:opacity-50"
+          className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 disabled:opacity-50"
           aria-label="Previous slide"
         >
-          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -204,22 +204,22 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
         <button
           onClick={nextSlide}
           disabled={isAnimating}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 disabled:opacity-50"
+          className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 disabled:opacity-50"
           aria-label="Next slide"
         >
-          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
         {/* Dots Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
           {doctors.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
               disabled={isAnimating}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
                 index === currentIndex 
                   ? 'bg-white scale-125' 
                   : 'bg-white/50 hover:bg-white/75'
@@ -231,7 +231,7 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
       </div>
 
       {/* Slide Counter */}
-      <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+      <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-black/50 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
         {currentIndex + 1} / {doctors.length}
       </div>
     </div>

@@ -19,20 +19,20 @@ export default function Services() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-health-50 to-primary-50 section-padding">
         <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left px-4 sm:px-0">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
                 {getServicesTranslation(locale, 'hero.title')}
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg lg:max-w-none mx-auto lg:mx-0">
                 {getServicesTranslation(locale, 'hero.subtitle')}
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center order-first lg:order-last mb-6 sm:mb-8 lg:mb-0 px-4 sm:px-0">
               <img 
                 src="/images/contact-hero.svg" 
                 alt="Contact Healthcare Services" 
-                className="w-full max-w-lg mx-auto rounded-2xl shadow-lg"
+                className="w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto rounded-xl sm:rounded-2xl shadow-lg"
               />
             </div>
           </div>
@@ -42,58 +42,58 @@ export default function Services() {
       {/* Services Grid */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4 sm:px-0">
             {services.map((service: any, index: number) => (
-              <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+              <div key={index} className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-300">
                 {/* Service Image */}
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                   {index === 0 && (
                     <img 
                       src="/images/nursing-care.svg" 
                       alt="Skilled Nursing Care" 
-                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4"
                     />
                   )}
                   {index === 1 && (
                     <img 
                       src="/images/physical-therapy.svg" 
                       alt="Physical Therapy" 
-                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4"
                     />
                   )}
                   {index === 2 && (
                     <img 
                       src="/images/personal-care.svg" 
                       alt="Personal Care Assistance" 
-                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4"
                     />
                   )}
                   {index === 3 && (
                     <img 
                       src="/images/medical-equipment.svg" 
                       alt="Medical Equipment & Supplies" 
-                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4"
                     />
                   )}
                   {index === 4 && (
                     <img 
                       src="/images/occupational-therapy.svg" 
                       alt="Occupational Therapy" 
-                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4"
                     />
                   )}
                   {index === 5 && (
                     <img 
                       src="/images/speech-therapy.svg" 
                       alt="Speech Therapy" 
-                      className="w-full h-48 object-cover rounded-xl mb-4"
+                      className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4"
                     />
                   )}
                 </div>
                 
-                <div className={`w-16 h-16 bg-${index % 2 === 0 ? 'health' : 'primary'}-100 rounded-full flex items-center justify-center mb-6`}>
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-${index % 2 === 0 ? 'health' : 'primary'}-100 rounded-full flex items-center justify-center mb-4 sm:mb-6`}>
                   <div className={`text-${index % 2 === 0 ? 'health' : 'primary'}-600`}>
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                   </div>

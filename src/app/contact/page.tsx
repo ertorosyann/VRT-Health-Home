@@ -58,12 +58,12 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-health-50 to-primary-50 section-padding">
         <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left px-4 sm:px-0">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
                 {getContactTranslation(locale, 'hero.title')}
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg lg:max-w-none mx-auto lg:mx-0">
                 {getContactTranslation(locale, 'hero.subtitle')}
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function Contact() {
       {/* Contact Form & Info */}
       <section className="section-padding bg-white">
         <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 px-4 sm:px-0">
             {/* Contact Form */}
             <div>
               <ContactForm />
@@ -82,22 +82,22 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">{getContactTranslation(locale, 'contactInfo.title')}</h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">{getContactTranslation(locale, 'contactInfo.title')}</h2>
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 {getContactTranslation(locale, 'contactInfo.subtitle')}
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-health-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-health-100 rounded-lg flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
                       <div className="text-health-600">
                         {info.icon}
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">{info.title}</h3>
-                      <p className="text-gray-600 whitespace-pre-line">{info.content}</p>
+                      <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">{info.title}</h3>
+                      <p className="text-gray-600 whitespace-pre-line text-sm sm:text-base">{info.content}</p>
                     </div>
                   </div>
                 ))}

@@ -94,12 +94,12 @@ export default function About() {
         </div>
         
         <div className="container-max relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-health-600 to-primary-600 bg-clip-text text-transparent">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center lg:text-left px-4 md:px-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 bg-gradient-to-r from-health-600 to-primary-600 bg-clip-text text-transparent leading-tight">
                 {getAboutTranslation(locale, 'hero.title')}
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg lg:max-w-none">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg lg:max-w-none mx-auto lg:mx-0">
                 {getAboutTranslation(locale, 'hero.subtitle')}
               </p>
             </div>
