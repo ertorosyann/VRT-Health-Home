@@ -1,67 +1,57 @@
+'use client'
+
 import ContactForm from './ContactForm'
 import CTAButtons from '@/components/CTAButtons'
 import DirectionsButton from '@/components/DirectionsButton'
-
-const contactInfo = [
-  {
-    title: 'Phone',
-    content: '(555) 123-4567',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Email',
-    content: 'info@vrthealthhome.com',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Address',
-    content: '123 Healthcare Ave, Suite 100, City, State 12345',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Hours',
-    content: 'Monday - Friday: 8:00 AM - 6:00 PM\n24/7 Emergency Response Available',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-]
-
-const faqs = [
-  {
-    question: 'How quickly can you start providing services?',
-    answer: 'We typically can begin services within 24-48 hours of your initial contact, depending on your specific needs and location.',
-  },
-  {
-    question: 'Do you accept insurance?',
-    answer: 'Yes, we work with most major insurance providers and Medicare/Medicaid. We also offer self-pay options for those without insurance coverage.',
-  },
-  {
-    question: 'What areas do you serve?',
-    answer: 'We provide services within a 25-mile radius of our main office, with extended coverage available upon request.',
-  },
-  {
-    question: 'How do I know if home healthcare is right for me?',
-    answer: 'Our team will conduct a comprehensive assessment to determine if home healthcare meets your needs and recommend the most appropriate services.',
-  },
-]
+import { useLanguage } from '@/lib/useLanguage'
+import { getContactTranslation } from '@/lib/translations/contact'
+import { type Locale } from '@/lib/i18n'
 
 export default function Contact() {
+  const { currentLocale } = useLanguage()
+  const locale = currentLocale as Locale
+
+  const contactInfo = [
+    {
+      title: getContactTranslation(locale, 'contactInfo.phone'),
+      content: getContactTranslation(locale, 'contactInfo.phoneNumber'),
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+      ),
+    },
+    {
+      title: getContactTranslation(locale, 'contactInfo.email'),
+      content: getContactTranslation(locale, 'contactInfo.emailAddress'),
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: getContactTranslation(locale, 'contactInfo.address'),
+      content: getContactTranslation(locale, 'contactInfo.addressText'),
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: getContactTranslation(locale, 'contactInfo.hours'),
+      content: getContactTranslation(locale, 'contactInfo.hoursText'),
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ]
+
+  const faqs = getContactTranslation(locale, 'faq.questions')
 
   return (
     <div className="min-h-screen">
@@ -71,11 +61,10 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Contact Us
+                {getContactTranslation(locale, 'hero.title')}
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Ready to get started with our home healthcare services? We're here to help and answer 
-                any questions you may have about our care options.
+                {getContactTranslation(locale, 'hero.subtitle')}
               </p>
             </div>
           </div>
@@ -93,10 +82,9 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{getContactTranslation(locale, 'contactInfo.title')}</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                We're here to help you understand our services and get started with the care you need. 
-                Don't hesitate to reach out with any questions or concerns.
+                {getContactTranslation(locale, 'contactInfo.subtitle')}
               </p>
 
               <div className="space-y-6">
@@ -122,22 +110,13 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">Emergency Response</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">{getContactTranslation(locale, 'emergency.title')}</h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  For urgent healthcare needs outside of business hours, our emergency response team is available 24/7.
+                  {getContactTranslation(locale, 'emergency.description')}
                 </p>
-                <div className="text-2xl font-bold text-health-600">(555) 123-4567</div>
+                <div className="text-2xl font-bold text-health-600">{getContactTranslation(locale, 'emergency.phoneNumber')}</div>
               </div>
-              
-              {/* Contact Image */}
-              {/* <div className="mt-8 text-center">
-                <img 
-                  src="/images/contact-hero.svg" 
-                  alt="Healthcare Communication" 
-                  className="w-full max-w-md mx-auto rounded-xl shadow-md"
-                />
-              </div> */}
             </div>
           </div>
         </div>
@@ -148,10 +127,10 @@ export default function Contact() {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Find Us
+              {getContactTranslation(locale, 'map.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visit our office or contact us to learn more about our home healthcare services.
+              {getContactTranslation(locale, 'map.subtitle')}
             </p>
           </div>
           
@@ -174,10 +153,9 @@ export default function Contact() {
                 {/* Location Information */}
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Office Location</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{getContactTranslation(locale, 'map.locationTitle')}</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      We're conveniently located in the heart of the city, making it easy for you to visit us 
-                      and discuss your healthcare needs in person.
+                      {getContactTranslation(locale, 'map.locationDescription')}
                     </p>
                   </div>
                   
@@ -190,7 +168,7 @@ export default function Contact() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
+                        <h4 className="font-semibold text-gray-900 mb-1">{getContactTranslation(locale, 'map.address')}</h4>
                         <p className="text-gray-600">123 Healthcare Ave, Suite 100<br />City, State 12345</p>
                       </div>
                     </div>
@@ -202,8 +180,8 @@ export default function Contact() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">Business Hours</h4>
-                        <p className="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 2:00 PM</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">{getContactTranslation(locale, 'map.businessHours')}</h4>
+                        <p className="text-gray-600">{getContactTranslation(locale, 'map.businessHoursText')}</p>
                       </div>
                     </div>
                     
@@ -214,7 +192,7 @@ export default function Contact() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+                        <h4 className="font-semibold text-gray-900 mb-1">{getContactTranslation(locale, 'map.phone')}</h4>
                         <p className="text-gray-600">(555) 123-4567</p>
                       </div>
                     </div>
@@ -235,16 +213,16 @@ export default function Contact() {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
+              {getContactTranslation(locale, 'faq.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our home healthcare services.
+              {getContactTranslation(locale, 'faq.subtitle')}
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {faqs.map((faq: any, index: number) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
@@ -259,16 +237,15 @@ export default function Contact() {
       <section className="section-padding bg-health-600">
         <div className="container-max text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+            {getContactTranslation(locale, 'cta.title')}
           </h2>
           <p className="text-xl text-health-100 mb-8 max-w-2xl mx-auto">
-            Don't wait to get the care you need. Contact us today to schedule a consultation 
-            and learn how we can help you or your loved ones.
+            {getContactTranslation(locale, 'cta.subtitle')}
           </p>
           <CTAButtons
-            primaryText="Call Now"
+            primaryText={getContactTranslation(locale, 'cta.callNow')}
             primaryHref="tel:(555) 123-4567"
-            secondaryText="View Services"
+            secondaryText={getContactTranslation(locale, 'cta.viewServices')}
             secondaryHref="/services"
             className="flex flex-col sm:flex-row gap-4 justify-center"
           />

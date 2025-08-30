@@ -1,0 +1,5 @@
+export { getHomeTranslation } from './home'
+export { getContactTranslation } from './contact'
+export { getAboutTranslation } from './about'
+export { getServicesTranslation } from './services'
+export { getMainTranslation } from './main'

@@ -11,7 +11,18 @@ interface Doctor {
   alt: string
 }
 
-const doctors: Doctor[] = [
+interface TeamMember {
+  name: string
+  role: string
+  bio: string
+  image: string
+}
+
+interface DoctorCarouselProps {
+  team?: TeamMember[]
+}
+
+const defaultDoctors: Doctor[] = [
   {
     id: 1,
     name: "Dr. Sarah Johnson",
@@ -42,7 +53,16 @@ const doctors: Doctor[] = [
   },
 ]
 
-export default function DoctorCarousel() {
+export default function DoctorCarousel({ team }: DoctorCarouselProps) {
+  // Use team data if provided, otherwise use default doctors
+  const doctors = team ? team.map((member, index) => ({
+    id: index + 1,
+    name: member.name,
+    specialty: member.role,
+    image: member.image,
+    alt: member.name
+  })) : defaultDoctors
+
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
