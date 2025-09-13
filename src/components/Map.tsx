@@ -8,7 +8,7 @@ type Place = {
   address: string;
 };
 
-export default function Map() {
+export default function Map({ height = "150px" }: { height?: string }) {
   const [place] = useState<Place>({
     lat: 34.1425,
     lng: -118.2551,
@@ -22,7 +22,7 @@ export default function Map() {
   });
 
   return (
-    <div style={{ width: "100%", height: "150px" }}>
+    <div style={{ width: "100%", height: height }}>
       {isLoaded && (
         <GoogleMap
           mapContainerStyle={{ width: "100%", height: "100%" }}

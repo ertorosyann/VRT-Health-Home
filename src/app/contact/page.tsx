@@ -6,7 +6,7 @@ import DirectionsButton from '@/components/DirectionsButton'
 import { useLanguage } from '@/lib/useLanguage'
 import { getContactTranslation } from '@/lib/translations/contact'
 import { type Locale } from '@/lib/i18n'
-
+import Map from '@/components/Map'
 export default function Contact() {
   const { currentLocale } = useLanguage()
   const locale = currentLocale as Locale
@@ -148,7 +148,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Map */}
                 <div className="w-full">
-                  <iframe
+                  {/* <iframe
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dgsWUxOykUxSyg&q=600+W+Broadway,+Glendale,+CA+91204"
                     width="100%"
                     height="400"
@@ -156,7 +156,8 @@ export default function Contact() {
                     allowFullScreen={true}
                     loading="lazy"
                     className="rounded-xl shadow-lg"
-                  ></iframe>
+                  ></iframe> */}
+                  <Map height="400" />
                 </div>
                 
                 {/* Location Information */}
