@@ -3,7 +3,7 @@ import { type Locale } from '../i18n'
 export const aboutTranslations = {
   en: {
     hero: {
-      title: 'About VRT Health Home',
+      title: 'About VRT HOME HEALTH CARE',
       subtitle: 'We are dedicated to providing exceptional home healthcare services that allow our patients to maintain their independence and quality of life in the comfort of their own homes.',
       professionalHealthcare: 'Professional Healthcare',
       compassionateCare: 'Compassionate care at home',
@@ -11,12 +11,14 @@ export const aboutTranslations = {
     mission: {
       title: 'Our Mission & Vision',
       mission: 'Mission',
-      missionText: 'To provide compassionate, professional healthcare services that enhance the quality of life for our patients and their families, enabling them to live independently at home with dignity and respect.',
+      missionText: 'OUR GOAL IS TO PROVIDE THE BEST QUALITY OF CARE IN THE COMFORT OF YOUR OWN HOME. Provide comprehensive in-home services to the ill, disabled, elderly and homebound without regard to race, sex, national origin, or religious background. These services are provided to improve/maintain the health status of our homebound clients and assist them to enjoy a longer and comfortable life at their own home.',
       vision: 'Vision',
       visionText: 'To be the leading provider of home healthcare services, recognized for our commitment to excellence, innovation, and patient-centered care that transforms the healthcare experience.',
       whyWeDo: 'Why We Do What We Do',
       whyWeDoText: 'Every person deserves to receive quality healthcare in the place they feel most comfortable - their home. We believe that home healthcare not only improves physical outcomes but also enhances emotional well-being and maintains family connections.',
       qualityCare: 'Quality Care',
+      teamApproach: 'Our Team Approach',
+      teamApproachText: 'VRT HOME HEALTH CARE is the liaison between the individual, the family members and the health care providers (i.e. physicians, nurses, therapists, social workers, home health aides, etc.). In home setting, everyone is a significant team player. Each team member\'s contribution is important to the health and well-being of the individual, thereby making his/her recovery faster.',
     },
     values: {
       title: 'Our Core Values',
@@ -89,12 +91,14 @@ export const aboutTranslations = {
     mission: {
       title: '我们的使命与愿景',
       mission: '使命',
-      missionText: '提供贴心、专业的医疗服务，提升患者及其家庭的生活质量，使他们能够在尊严和尊重中独立地在家中生活。',
+      missionText: '我们的目标是在您舒适的家中提供最优质的护理。为患病、残疾、老年人和居家患者提供全面的居家服务，不论种族、性别、民族或宗教背景。这些服务旨在改善/维持我们居家客户的健康状况，并协助他们在自己的家中享受更长、更舒适的生活。',
       vision: '愿景',
       visionText: '成为居家医疗服务的领先提供商，因我们对卓越、创新和以患者为中心的护理的承诺而得到认可，这些护理改变了医疗体验。',
       whyWeDo: '我们为什么这样做',
       whyWeDoText: '每个人都应该在最舒适的地方 - 他们的家中 - 获得优质医疗护理。我们相信居家医疗护理不仅能改善身体结果，还能增强情感福祉并维持家庭联系。',
       qualityCare: '优质护理',
+      teamApproach: '我们的团队方法',
+      teamApproachText: 'VRT健康之家是个人、家庭成员和医疗提供者（即医生、护士、治疗师、社会工作者、家庭健康助手等）之间的联络人。在家庭环境中，每个人都是重要的团队成员。每个团队成员的贡献对个人的健康和福祉都很重要，从而使他/她的康复更快。',
     },
     values: {
       title: '我们的核心价值观',
@@ -167,12 +171,14 @@ export const aboutTranslations = {
     mission: {
       title: 'Nuestra Misión y Visión',
       mission: 'Misión',
-      missionText: 'Proporcionar servicios de atención médica compasivos y profesionales que mejoren la calidad de vida de nuestros pacientes y sus familias, permitiéndoles vivir independientemente en casa con dignidad y respeto.',
+      missionText: 'NUESTRO OBJETIVO ES PROPORCIONAR LA MEJOR CALIDAD DE CUIDADO EN LA COMODIDAD DE SU PROPIO HOGAR. Proporcionar servicios integrales en el hogar a los enfermos, discapacitados, ancianos y confinados en casa sin importar raza, sexo, origen nacional o antecedentes religiosos. Estos servicios se proporcionan para mejorar/mantener el estado de salud de nuestros clientes confinados en casa y ayudarlos a disfrutar de una vida más larga y cómoda en su propio hogar.',
       vision: 'Visión',
       visionText: 'Ser el proveedor líder de servicios de atención médica domiciliaria, reconocido por nuestro compromiso con la excelencia, la innovación y la atención centrada en el paciente que transforma la experiencia de atención médica.',
       whyWeDo: 'Por Qué Hacemos Lo Que Hacemos',
       whyWeDoText: 'Toda persona merece recibir atención médica de calidad en el lugar donde se siente más cómoda: su hogar. Creemos que la atención médica domiciliaria no solo mejora los resultados físicos, sino que también mejora el bienestar emocional y mantiene las conexiones familiares.',
       qualityCare: 'Cuidado de Calidad',
+      teamApproach: 'Nuestro Enfoque de Equipo',
+      teamApproachText: 'VRT Hogar Salud es el enlace entre el individuo, los miembros de la familia y los proveedores de atención médica (es decir, médicos, enfermeras, terapeutas, trabajadores sociales, asistentes de salud en el hogar, etc.). En el entorno del hogar, todos son jugadores importantes del equipo. La contribución de cada miembro del equipo es importante para la salud y el bienestar del individuo, haciendo así que su recuperación sea más rápida.',
     },
     values: {
       title: 'Nuestros Valores Fundamentales',
@@ -245,12 +251,14 @@ export const aboutTranslations = {
     mission: {
       title: 'Notre Mission et Vision',
       mission: 'Mission',
-      missionText: 'Fournir des services de soins de santé professionnels et compatissants qui améliorent la qualité de vie de nos patients et de leurs familles, leur permettant de vivre indépendamment à domicile avec dignité et respect.',
+      missionText: 'NOTRE OBJECTIF EST DE FOURNIR LA MEILLEURE QUALITÉ DE SOINS DANS LE CONFORT DE VOTRE PROPRE MAISON. Fournir des services complets à domicile aux malades, aux personnes handicapées, aux personnes âgées et aux personnes confinées à domicile sans égard à la race, au sexe, à l\'origine nationale ou aux antécédents religieux. Ces services sont fournis pour améliorer/maintenir l\'état de santé de nos clients confinés à domicile et les aider à profiter d\'une vie plus longue et plus confortable dans leur propre maison.',
       vision: 'Vision',
       visionText: 'Être le fournisseur leader de services de soins de santé à domicile, reconnu pour notre engagement envers l\'excellence, l\'innovation et les soins centrés sur le patient qui transforment l\'expérience de soins de santé.',
       whyWeDo: 'Pourquoi Nous Faisons Ce Que Nous Faisons',
       whyWeDoText: 'Chaque personne mérite de recevoir des soins de santé de qualité dans l\'endroit où elle se sent le plus à l\'aise - sa maison. Nous croyons que les soins de santé à domicile améliorent non seulement les résultats physiques, mais améliorent également le bien-être émotionnel et maintiennent les connexions familiales.',
       qualityCare: 'Soins de Qualité',
+      teamApproach: 'Notre Approche d\'Équipe',
+      teamApproachText: 'VRT Santé à Domicile est le lien entre l\'individu, les membres de la famille et les fournisseurs de soins de santé (c\'est-à-dire médecins, infirmières, thérapeutes, travailleurs sociaux, aides-soignants à domicile, etc.). Dans le cadre du domicile, chacun est un joueur d\'équipe important. La contribution de chaque membre de l\'équipe est importante pour la santé et le bien-être de l\'individu, rendant ainsi sa récupération plus rapide.',
     },
     values: {
       title: 'Nos Valeurs Fondamentales',

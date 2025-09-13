@@ -41,6 +41,15 @@ export default function Contact() {
       ),
     },
     {
+      title: getContactTranslation(locale, 'contactInfo.fax'),
+      content: getContactTranslation(locale, 'contactInfo.faxNumber'),
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
       title: getContactTranslation(locale, 'contactInfo.hours'),
       content: getContactTranslation(locale, 'contactInfo.hoursText'),
       icon: (
@@ -140,7 +149,7 @@ export default function Contact() {
                 {/* Map */}
                 <div className="w-full">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.9651!2d-118.2551!3d34.1425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sGlendale%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1234567890"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dgsWUxOykUxSyg&q=600+W+Broadway,+Glendale,+CA+91204"
                     width="100%"
                     height="400"
                     style={{ border: 0 }}
@@ -169,7 +178,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-1">{getContactTranslation(locale, 'map.address')}</h4>
-                        <p className="text-gray-600">123 Healthcare Ave, Suite 100<br />City, State 12345</p>
+                        <p className="text-gray-600">600 W Broadway<br />Glendale, CA 91204</p>
                       </div>
                     </div>
                     
@@ -193,7 +202,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-1">{getContactTranslation(locale, 'map.phone')}</h4>
-                        <p className="text-gray-600">(555) 123-4567</p>
+                        <p className="text-gray-600">(818) 484-7508</p>
                       </div>
                     </div>
                   </div>
@@ -234,17 +243,17 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-health-600">
+      <section className="section-padding ">
         <div className="container-max text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-health-600 mb-4">
             {getContactTranslation(locale, 'cta.title')}
           </h2>
-          <p className="text-xl text-health-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             {getContactTranslation(locale, 'cta.subtitle')}
           </p>
           <CTAButtons
             primaryText={getContactTranslation(locale, 'cta.callNow')}
-            primaryHref="tel:(555) 123-4567"
+            primaryHref="tel:(818) 484-7508"
             secondaryText={getContactTranslation(locale, 'cta.viewServices')}
             secondaryHref="/services"
             className="flex flex-col sm:flex-row gap-4 justify-center"

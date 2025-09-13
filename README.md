@@ -1,6 +1,6 @@
-# VRT Health Home - Next.js Multi-Language Website
+# VRT HOME HEALTH CARE - Next.js Multi-Language Website
 
-A modern, responsive, multi-language website for VRT Health Home, a professional home healthcare services provider. Built with Next.js 14, TypeScript, and Tailwind CSS with full internationalization support.
+A modern, responsive, multi-language website for VRT HOME HEALTH CARE, a professional home healthcare services provider. Built with Next.js 14, TypeScript, and Tailwind CSS with full internationalization support.
 
 ## 🌍 Multi-Language Support
 
@@ -19,7 +19,7 @@ The website supports **4 languages**:
 
 ## 🏥 About
 
-VRT Health Home provides professional, compassionate home healthcare services including:
+VRT HOME HEALTH CARE provides professional, compassionate home healthcare services including:
 - Skilled Nursing Care
 - Physical Therapy
 - Personal Care Assistance
@@ -263,11 +263,11 @@ For questions or support:
 
 ## 📄 License
 
-This project is proprietary software for VRT Health Home.
+This project is proprietary software for VRT HOME HEALTH CARE.
 
 ## 🤝 Contributing
 
-This is a private project for VRT Health Home. For internal development:
+This is a private project for VRT HOME HEALTH CARE. For internal development:
 1. Create a feature branch
 2. Make your changes
 3. Submit a pull request
@@ -275,4 +275,4 @@ This is a private project for VRT Health Home. For internal development:
 
 ---
 
-Built with ❤️ for VRT Health Home - Supporting Healthcare in Multiple Languages
+Built with ❤️ for VRT HOME HEALTH CARE - Supporting Healthcare in Multiple Languages

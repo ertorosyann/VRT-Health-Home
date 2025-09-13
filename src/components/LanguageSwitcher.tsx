@@ -55,11 +55,11 @@ const LanguageSwitcher = () => {
         </div>
       </button>
 
-      {/* Dropdown Menu - Opens ABOVE the button */}
+      {/* Dropdown Menu - Opens ABOVE on mobile, BELOW on tablet+ */}
       {isOpen && (
-        <div className="absolute bottom-full left-0 mb-2 w-48 bg-white rounded-xl border border-gray-200 shadow-2xl z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-          {/* Dropdown arrow pointing DOWN to the button */}
-          <div className="absolute -bottom-2 left-6 w-4 h-4 bg-white border-r border-b border-gray-200 transform rotate-45"></div>
+        <div className="absolute bottom-full left-0 mb-2 md:bottom-auto md:top-full md:mt-2 md:mb-0 w-48 bg-white rounded-xl border border-gray-200 shadow-2xl z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+          {/* Dropdown arrow pointing DOWN to the button on mobile, UP on tablet+ */}
+          <div className="absolute -bottom-2 left-6 w-4 h-4 bg-white border-r border-b border-gray-200 transform rotate-45 md:bottom-auto md:-top-2 md:border-t md:border-l md:border-r-0 md:border-b-0"></div>
           
           {/* Language options */}
           <div className="py-2">

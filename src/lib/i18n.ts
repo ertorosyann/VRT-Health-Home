@@ -88,9 +88,9 @@ export const common = {
 // Company info translations
 export const company = {
   en: {
-    name: 'VRT Health Home',
+    name: 'VRT HOME HEALTH CARE',
     tagline: 'Professional Care at Home',
-    description: 'Providing professional, compassionate home healthcare services. Our experienced team delivers personalized care in the comfort of your home.',
+    description: 'OUR GOAL IS TO PROVIDE THE BEST QUALITY OF CARE IN THE COMFORT OF YOUR OWN HOME. We provide comprehensive in-home services to the ill, disabled, elderly and homebound without regard to race, sex, national origin, or religious background.',
   },
   zh: {
     name: 'VRT健康之家',

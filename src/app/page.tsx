@@ -62,6 +62,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Core Values Section */}
+      <section className="section-padding bg-gradient-to-br from-health-50 to-primary-50">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {getHomeTranslation(locale, 'coreValues.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {getHomeTranslation(locale, 'coreValues.subtitle')}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {getHomeTranslation(locale, 'coreValues.values').map((value: any, index: number) => (
+              <div key={index} className="text-center group">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="w-20 h-20 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-health-200 transition-colors duration-300">
+                    <span className="text-2xl font-bold text-health-600">{value.word.charAt(0)}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-health-600 mb-4">{value.word}</h3>
+                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Doctor Carousel Section */}
       <section className="bg-white">
         <div className="text-center py-12 px-4 sm:px-0">
@@ -423,19 +451,19 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-health-600">
+      <section className="section-padding ">
         <div className="container-max text-center px-4 sm:px-0">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-health-600 mb-3 sm:mb-4">
             {getHomeTranslation(locale, 'cta.title')}
           </h2>
-          <p className="text-lg sm:text-xl text-health-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
             {getHomeTranslation(locale, 'cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-health-600 hover:bg-gray-100 font-medium py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-base sm:text-lg">
+            <Link href="/contact" className="bg-white border-2 border-gray-200 text-gray-600 hover:bg-gray-300 hover:text-health-600 font-medium py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-base sm:text-lg">
               {getHomeTranslation(locale, 'cta.contactUs')}
             </Link>
-            <Link href="/services" className="border-2 border-white text-white hover:bg-white hover:text-health-600 font-medium py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-base sm:text-lg">
+            <Link href="/services" className="border-2 border-gray-200 text-gray-600 hover:bg-gray-300 hover:text-health-600 font-medium py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-base sm:text-lg">
               {getHomeTranslation(locale, 'cta.viewServices')}
             </Link>
           </div>

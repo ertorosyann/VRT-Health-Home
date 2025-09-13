@@ -9,27 +9,27 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://vrthealthhome.com'),
   title: {
-    default: 'VRT Health Home - Professional Home Healthcare Services',
-    template: '%s | VRT Health Home'
+    default: 'VRT HOME HEALTH CARE - Professional Home Healthcare Services',
+    template: '%s | VRT HOME HEALTH CARE'
   },
-  description: 'VRT Health Home provides professional, compassionate home healthcare services. Our experienced team delivers personalized care in the comfort of your home.',
+  description: 'VRT HOME HEALTH CARE provides professional, compassionate home healthcare services. Our experienced team delivers personalized care in the comfort of your home.',
   keywords: ['home healthcare', 'home health services', 'VRT health', 'professional care', 'home nursing', 'healthcare at home'],
-  authors: [{ name: 'VRT Health Home' }],
-  creator: 'VRT Health Home',
-  publisher: 'VRT Health Home',
+  authors: [{ name: 'VRT HOME HEALTH CARE' }],
+  creator: 'VRT HOME HEALTH CARE',
+  publisher: 'VRT HOME HEALTH CARE',
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://vrthealthhome.com',
-    title: 'VRT Health Home - Professional Home Healthcare Services',
-    description: 'VRT Health Home provides professional, compassionate home healthcare services. Our experienced team delivers personalized care in the comfort of your home.',
-    siteName: 'VRT Health Home',
+    title: 'VRT HOME HEALTH CARE - Professional Home Healthcare Services',
+    description: 'VRT HOME HEALTH CARE provides professional, compassionate home healthcare services. Our experienced team delivers personalized care in the comfort of your home.',
+    siteName: 'VRT HOME HEALTH CARE',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VRT Health Home - Professional Home Healthcare Services',
-    description: 'VRT Health Home provides professional, compassionate home healthcare services.',
+    title: 'VRT HOME HEALTH CARE - Professional Home Healthcare Services',
+    description: 'VRT HOME HEALTH CARE provides professional, compassionate home healthcare services.',
   },
   category: 'healthcare',
 }

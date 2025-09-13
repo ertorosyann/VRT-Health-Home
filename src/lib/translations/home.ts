@@ -5,9 +5,27 @@ export const homeTranslations = {
     hero: {
       title: 'Professional Healthcare',
       titleHighlight: 'at Home',
-      subtitle: 'VRT Health Home provides compassionate, professional healthcare services in the comfort of your own home. Our experienced team is dedicated to your health and well-being.',
+      subtitle: 'OUR GOAL IS TO PROVIDE THE BEST QUALITY OF CARE IN THE COMFORT OF YOUR OWN HOME. VRT HOME HEALTH CARE provides compassionate, professional healthcare services. Our experienced team is dedicated to your health and well-being.',
       getStarted: 'Get Started Today',
       learnMore: 'Learn More',
+    },
+    coreValues: {
+      title: 'Our Core Values',
+      subtitle: 'We are committed to providing care that is',
+      values: [
+        {
+          word: 'LOVING',
+          description: 'We treat every patient with genuine love and care, as if they were our own family members.',
+        },
+        {
+          word: 'CARING',
+          description: 'Our dedicated team provides attentive, personalized care that meets your unique needs.',
+        },
+        {
+          word: 'COMPASSIONATE',
+          description: 'We understand the challenges you face and provide empathetic support throughout your journey.',
+        },
+      ],
     },
     features: {
       title: 'Comprehensive Home Healthcare Services',
@@ -32,7 +50,7 @@ export const homeTranslations = {
       ],
     },
     whyChoose: {
-      title: 'Why Choose VRT Health Home?',
+      title: 'Why Choose VRT HOME HEALTH CARE?',
       items: [
         'Licensed & Certified Staff',
         '24/7 Availability',
@@ -47,12 +65,12 @@ export const homeTranslations = {
     },
     testimonials: {
       title: 'What Our Clients Say',
-      subtitle: 'Don\'t just take our word for it. Here\'s what families and patients have to say about their experience with VRT Health Home.',
+      subtitle: 'Don\'t just take our word for it. Here\'s what families and patients have to say about their experience with VRT HOME HEALTH CARE.',
       items: [
         {
           name: 'Sarah Johnson',
           role: 'Patient Family Member',
-          content: 'VRT Health Home has been incredible. The care and attention they provide to my mother is exceptional. I have peace of mind knowing she\'s in good hands.',
+          content: 'VRT HOME HEALTH CARE has been incredible. The care and attention they provide to my mother is exceptional. I have peace of mind knowing she\'s in good hands.',
         },
         {
           name: 'Michael Chen',
@@ -62,7 +80,7 @@ export const homeTranslations = {
         {
           name: 'Lisa Rodriguez',
           role: 'Patient Family Member',
-          content: 'We\'ve been using VRT Health Home for over a year now. The consistency and quality of care is outstanding.',
+          content: 'We\'ve been using VRT HOME HEALTH CARE for over a year now. The consistency and quality of care is outstanding.',
         },
       ],
     },
@@ -74,6 +92,24 @@ export const homeTranslations = {
       subtitle: 'VRT健康之家在您舒适的家中提供贴心、专业的医疗服务。我们经验丰富的团队致力于您的健康和福祉。',
       getStarted: '今天就开始',
       learnMore: '了解更多',
+    },
+    coreValues: {
+      title: '我们的核心价值观',
+      subtitle: '我们致力于提供',
+      values: [
+        {
+          word: '充满爱心的',
+          description: '我们像对待自己的家人一样，用真诚的爱和关怀对待每一位患者。',
+        },
+        {
+          word: '关怀备至的',
+          description: '我们敬业的团队提供专注的个性化护理，满足您的独特需求。',
+        },
+        {
+          word: '富有同情心的',
+          description: '我们理解您面临的挑战，并在您的整个旅程中提供富有同理心的支持。',
+        },
+      ],
     },
     features: {
       title: '全面的居家医疗服务',
@@ -141,6 +177,24 @@ export const homeTranslations = {
       getStarted: 'Comenzar Hoy',
       learnMore: 'Saber Más',
     },
+    coreValues: {
+      title: 'Nuestros Valores Fundamentales',
+      subtitle: 'Estamos comprometidos a brindar atención que es',
+      values: [
+        {
+          word: 'AMOROSA',
+          description: 'Tratamos a cada paciente con amor genuino y cuidado, como si fueran miembros de nuestra propia familia.',
+        },
+        {
+          word: 'CUIDADOSA',
+          description: 'Nuestro equipo dedicado proporciona atención personalizada y atenta que satisface sus necesidades únicas.',
+        },
+        {
+          word: 'COMPASIVA',
+          description: 'Entendemos los desafíos que enfrenta y brindamos apoyo empático a lo largo de su viaje.',
+        },
+      ],
+    },
     features: {
       title: 'Servicios Integrales de Atención Médica Domiciliaria',
       subtitle: 'Ofrecemos una amplia gama de servicios de atención médica profesional diseñados para satisfacer sus necesidades específicas y ayudarle a mantener su independencia en casa.',
@@ -206,6 +260,24 @@ export const homeTranslations = {
       subtitle: 'VRT Santé à Domicile fournit des services de soins de santé professionnels et compatissants dans le confort de votre maison. Notre équipe expérimentée se consacre à votre santé et à votre bien-être.',
       getStarted: 'Commencer Aujourd\'hui',
       learnMore: 'En Savoir Plus',
+    },
+    coreValues: {
+      title: 'Nos Valeurs Fondamentales',
+      subtitle: 'Nous nous engageons à fournir des soins qui sont',
+      values: [
+        {
+          word: 'AIMANTS',
+          description: 'Nous traitons chaque patient avec un amour et des soins authentiques, comme s\'ils étaient membres de notre propre famille.',
+        },
+        {
+          word: 'ATTENTIFS',
+          description: 'Notre équipe dévouée fournit des soins personnalisés et attentifs qui répondent à vos besoins uniques.',
+        },
+        {
+          word: 'COMPATISSANTS',
+          description: 'Nous comprenons les défis auxquels vous faites face et fournissons un soutien empathique tout au long de votre parcours.',
+        },
+      ],
     },
     features: {
       title: 'Services Complets de Soins de Santé à Domicile',

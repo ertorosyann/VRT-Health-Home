@@ -116,6 +116,93 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Who Needs Home Care */}
+      <section className="section-padding bg-gradient-to-br from-health-20 to-primary-20 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          style={{
+            backgroundImage: "url('/images/who-we-need.JPG')"
+          }}
+        ></div>
+        
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0"></div>
+        <div className="container-max relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
+              {getServicesTranslation(locale, 'whoNeedsCare.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              {getServicesTranslation(locale, 'whoNeedsCare.subtitle')}
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6">Eligibility Criteria</h3>
+                  <ul className="space-y-4">
+                    {getServicesTranslation(locale, 'whoNeedsCare.criteria').map((criterion: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <div className="w-6 h-6 bg-health-100 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                          <svg className="w-4 h-4 text-health-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-700">{criterion}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-health-50 rounded-xl p-6">
+                  <h4 className="text-lg font-semibold text-health-800 mb-4">Important Note</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    {getServicesTranslation(locale, 'whoNeedsCare.note')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Payment Options */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {getServicesTranslation(locale, 'paymentOptions.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              {getServicesTranslation(locale, 'paymentOptions.subtitle')}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {getServicesTranslation(locale, 'paymentOptions.options').map((option: any, index: number) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                <div className="w-16 h-16 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-health-600">{option.name.charAt(0)}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{option.name}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{option.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <div className="bg-health-100 rounded-xl p-6 max-w-2xl mx-auto">
+              <h4 className="text-lg font-semibold text-health-800 mb-3">Requirement</h4>
+              <p className="text-gray-700">
+                {getServicesTranslation(locale, 'paymentOptions.requirement')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="section-padding bg-gray-50">
         <div className="container-max">
