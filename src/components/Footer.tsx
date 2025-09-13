@@ -143,6 +143,9 @@ const Footer = () => {
             </div>
             </div>
 
+
+            
+
             {/* Our Location */}
             <div className="md:col-span-1">
               <h3 className="text-lg font-bold text-gray-900 mb-6">OUR LOCATION</h3>
