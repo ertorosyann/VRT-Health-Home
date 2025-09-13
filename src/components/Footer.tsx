@@ -81,10 +81,10 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="py-12 sm:py-16">
         <div className="container-max mx-auto px-4 sm:px-6 md:px-8 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-12">
+git          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
             {/* Company Branding */}
-            <div className="md:col-span-1">
-              <div className="flex flex-col items-center md:items-start mb-6">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <div className="flex flex-col items-center lg:items-start mb-6">
                 <div className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-32 lg:h-28 rounded-xl flex items-center justify-center mb-4">
                   <Image 
                     src="/images/logo.webp" 
@@ -94,19 +94,17 @@ const Footer = () => {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center md:text-left">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center lg:text-left">
                   {company[currentLocale as keyof typeof company].name}
                 </h3>
-                <p className="text-gray-600 text-sm text-center md:text-left">
+                <p className="text-gray-600 text-sm text-center lg:text-left">
                   Professional Care at Home
                 </p>
               </div>
             </div>
 
-            <div className="md:col-span-1 sm:col-span-2">
-
             {/* Our Services */}
-            <div className="md:col-span-1">
+            <div className="sm:col-span-1 lg:col-span-1">
               <h3 className="text-lg font-bold text-gray-900 mb-6">OUR SERVICES</h3>
               <ul className="space-y-3">
                 {[
@@ -128,7 +126,7 @@ const Footer = () => {
             </div>
 
             {/* Contact */}
-            <div className="md:col-span-1 sm:col-span-2">
+            <div className="sm:col-span-1 lg:col-span-1">
               <h3 className="text-lg font-bold text-gray-900 mb-6">CONTACT</h3>
               <div className="space-y-3">
                 <div>
@@ -141,29 +139,15 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            </div>
-
-
-            
 
             {/* Our Location */}
-            <div className="md:col-span-1">
+            <div className="sm:col-span-2 lg:col-span-1">
               <h3 className="text-lg font-bold text-gray-900 mb-6">OUR LOCATION</h3>
               <div className="space-y-4">
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  {/* <iframe
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dgsWUxOykUxSyg&q=600+W+Broadway,+Glendale,+CA+91204"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    className="w-full h-32 sm:h-40 md:h-44 lg:h-48"
-                  ></iframe> */}
-
                   <Map />
                 </div>
-                <div className="text-center md:text-left">
+                <div className="text-center lg:text-left">
                   <p className="text-gray-600 text-sm font-medium">
                     600 W Broadway<br />
                     Glendale, CA 91204
