@@ -81,7 +81,7 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="py-12 sm:py-16">
         <div className="container-max mx-auto px-4 sm:px-6 md:px-8 lg:px-8">
-git          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
             {/* Company Branding */}
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex flex-col items-center lg:items-start mb-6">
