@@ -157,7 +157,7 @@ export default function Contact() {
                     loading="lazy"
                     className="rounded-xl shadow-lg"
                   ></iframe> */}
-                  <Map height="400" />
+                  <Map height="400px" />
                 </div>
                 
                 {/* Location Information */}
