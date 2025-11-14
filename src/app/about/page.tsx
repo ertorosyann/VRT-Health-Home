@@ -10,7 +10,7 @@ import DoctorCarousel from '@/components/DoctorCarousel'
 export default function About() {
   const { currentLocale } = useLanguage()
   const locale = currentLocale as Locale
-  
+
   const team = [
     {
       name: 'Dr. Sarah Williams',
@@ -43,8 +43,18 @@ export default function About() {
       title: getAboutTranslation(locale, 'values.compassion.title'),
       description: getAboutTranslation(locale, 'values.compassion.description'),
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
         </svg>
       ),
     },
@@ -52,8 +62,18 @@ export default function About() {
       title: getAboutTranslation(locale, 'values.excellence.title'),
       description: getAboutTranslation(locale, 'values.excellence.description'),
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
         </svg>
       ),
     },
@@ -61,8 +81,18 @@ export default function About() {
       title: getAboutTranslation(locale, 'values.integrity.title'),
       description: getAboutTranslation(locale, 'values.integrity.description'),
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
         </svg>
       ),
     },
@@ -70,8 +100,18 @@ export default function About() {
       title: getAboutTranslation(locale, 'values.innovation.title'),
       description: getAboutTranslation(locale, 'values.innovation.description'),
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 10V3L4 14h7v7l9-11h-7z"
+          />
         </svg>
       ),
     },
@@ -92,7 +132,7 @@ export default function About() {
           />
           {/* <div className="absolute inset-0 bg-gradient-to-br from-health-50/80 to-primary-50/80"></div> */}
         </div>
-        
+
         <div className="container-max relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left px-4 md:px-0">
@@ -103,7 +143,6 @@ export default function About() {
                 {getAboutTranslation(locale, 'hero.subtitle')}
               </p>
             </div>
-            
           </div>
         </div>
       </section>
@@ -118,13 +157,17 @@ export default function About() {
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-health-600 mb-3">{getAboutTranslation(locale, 'mission.mission')}</h3>
+                  <h3 className="text-xl font-semibold text-health-600 mb-3">
+                    {getAboutTranslation(locale, 'mission.mission')}
+                  </h3>
                   <p className="text-gray-600 leading-relaxed">
                     {getAboutTranslation(locale, 'mission.missionText')}
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-health-600 mb-3">{getAboutTranslation(locale, 'mission.vision')}</h3>
+                  <h3 className="text-xl font-semibold text-health-600 mb-3">
+                    {getAboutTranslation(locale, 'mission.vision')}
+                  </h3>
                   <p className="text-gray-600 leading-relaxed">
                     {getAboutTranslation(locale, 'mission.visionText')}
                   </p>
@@ -134,24 +177,48 @@ export default function About() {
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="text-center">
                 <div className="w-24 h-24 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-12 h-12 text-health-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  <svg
+                    className="w-12 h-12 text-health-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{getAboutTranslation(locale, 'mission.whyWeDo')}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {getAboutTranslation(locale, 'mission.whyWeDo')}
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
                   {getAboutTranslation(locale, 'mission.whyWeDoText')}
                 </p>
-                
+
                 {/* Mission Image */}
                 <div className="mt-6">
                   <div className="w-full max-w-xs mx-auto bg-gradient-to-br from-health-200 to-primary-200 rounded-xl shadow-md p-6">
                     <div className="w-16 h-16 bg-health-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
                       </svg>
                     </div>
-                    <p className="text-sm text-health-700 font-medium">{getAboutTranslation(locale, 'mission.qualityCare')}</p>
+                    <p className="text-sm text-health-700 font-medium">
+                      {getAboutTranslation(locale, 'mission.qualityCare')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -171,36 +238,81 @@ export default function About() {
               {getAboutTranslation(locale, 'mission.teamApproachText')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-health-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                <svg
+                  className="w-10 h-10 text-health-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Individual & Family</h3>
-              <p className="text-gray-600">The patient and their loved ones are at the center of our care team</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Individual & Family
+              </h3>
+              <p className="text-gray-600">
+                The patient and their loved ones are at the center of our care
+                team
+              </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-health-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-10 h-10 text-health-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Healthcare Providers</h3>
-              <p className="text-gray-600">Physicians, nurses, therapists, social workers, and home health aides</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Healthcare Providers
+              </h3>
+              <p className="text-gray-600">
+                Physicians, nurses, therapists, social workers, and home health
+                aides
+              </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-health-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <svg
+                  className="w-10 h-10 text-health-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">VRT as Liaison</h3>
-              <p className="text-gray-600">We coordinate and facilitate communication between all team members</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                VRT as Liaison
+              </h3>
+              <p className="text-gray-600">
+                We coordinate and facilitate communication between all team
+                members
+              </p>
             </div>
           </div>
         </div>
@@ -217,17 +329,22 @@ export default function About() {
               {getAboutTranslation(locale, 'values.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div
+                key={index}
+                className="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
                 <div className="w-16 h-16 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-health-600">
-                    {value.icon}
-                  </div>
+                  <div className="text-health-600">{value.icon}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -239,13 +356,10 @@ export default function About() {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {getAboutTranslation(locale, 'team.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {getAboutTranslation(locale, 'team.subtitle')}
-            </p>
+            </h2>
           </div>
-          
+
           {/* Team Carousel */}
           <div className="mb-12">
             <DoctorCarousel team={team} />
@@ -259,19 +373,27 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-health-100">{getAboutTranslation(locale, 'stats.patientsServed')}</div>
+              <div className="text-health-100">
+                {getAboutTranslation(locale, 'stats.patientsServed')}
+              </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">50+</div>
-              <div className="text-health-100">{getAboutTranslation(locale, 'stats.healthcareProfessionals')}</div>
+              <div className="text-health-100">
+                {getAboutTranslation(locale, 'stats.healthcareProfessionals')}
+              </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">5+</div>
-              <div className="text-health-100">{getAboutTranslation(locale, 'stats.yearsOfService')}</div>
+              <div className="text-health-100">
+                {getAboutTranslation(locale, 'stats.yearsOfService')}
+              </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">98%</div>
-              <div className="text-health-100">{getAboutTranslation(locale, 'stats.patientSatisfaction')}</div>
+              <div className="text-health-100">
+                {getAboutTranslation(locale, 'stats.patientSatisfaction')}
+              </div>
             </div>
           </div>
         </div>
@@ -296,4 +418,4 @@ export default function About() {
       </section>
     </div>
   )
-} 
+}

@@ -1,37 +1,21 @@
-import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { useState } from "react";
-
-type Place = {
-  lat: number;
-  lng: number;
-  name: string;
-  address: string;
-};
-
-export default function Map({ height = "150px" }: { height?: string }) {
-  const [place] = useState<Place>({
-    lat: 34.1425,
-    lng: -118.2551,
-    name: "VRT HOME HEALTH CARE",
-    address: "600 W Broadway, Glendale, CA 91204",
-  });
-
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
-  });
+export default function Map({ height = '150px' }: { height?: string }) {
+  // Using Google Maps embed with the address
+  const address = encodeURIComponent(
+    '600 W Broadway suite 240B, Glendale, CA 91204'
+  )
 
   return (
-    <div style={{ width: "100%", height: height }}>
-      {isLoaded && (
-        <GoogleMap
-          mapContainerStyle={{ width: "100%", height: "100%" }}
-          zoom={15}
-          center={{ lat: place.lat, lng: place.lng }}
-        >
-          <Marker position={{ lat: place.lat, lng: place.lng }} />
-        </GoogleMap>
-      )}
+    <div style={{ width: '100%', height: height }}>
+      <iframe
+        src={`https://maps.google.com/maps?q=${address}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen={true}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="rounded-lg"
+      ></iframe>
     </div>
-  );
+  )
 }

@@ -8,58 +8,116 @@ export default function ContactForm() {
     lastName: '',
     email: '',
     phone: '',
+    medicareNumber: '',
     service: '',
     message: '',
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setSubmitSuccess(true)
-    
-    // Reset form after success
-    setTimeout(() => {
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
+    setSubmitError(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-      setSubmitSuccess(false)
-    }, 3000)
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      setIsSubmitting(false)
+      setSubmitSuccess(true)
+
+      // Reset form after success
+      setTimeout(() => {
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          medicareNumber: '',
+          service: '',
+          message: '',
+        })
+        setSubmitSuccess(false)
+      }, 3000)
+    } catch (error) {
+      setIsSubmitting(false)
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : 'An error occurred. Please try again later.'
+      )
+    }
   }
 
   return (
     <div>
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-      
+      <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        Send Us a Message
+      </h2>
+
       {submitSuccess && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <div className="flex items-center">
-            <svg className="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            <svg
+              className="w-5 h-5 text-green-400 mr-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
             </svg>
             <span className="text-green-800 font-medium">
-              Thank you! Your message has been sent successfully. We'll get back to you soon.
+              Thank you! Your message has been sent successfully. We'll get back
+              to you soon.
             </span>
+          </div>
+        </div>
+      )}
+
+      {submitError && (
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <div className="flex items-center">
+            <svg
+              className="w-5 h-5 text-red-400 mr-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="text-red-800 font-medium">{submitError}</span>
           </div>
         </div>
       )}
@@ -67,7 +125,10 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="firstName"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               First Name *
             </label>
             <input
@@ -81,7 +142,10 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="lastName"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Last Name *
             </label>
             <input
@@ -98,21 +162,26 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              Email *
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              required
               value={formData.email}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-500 focus:border-transparent transition-colors duration-200"
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Phone Number
             </label>
             <input
@@ -127,7 +196,28 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="medicareNumber"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            Medicare Number *
+          </label>
+          <input
+            type="text"
+            id="medicareNumber"
+            name="medicareNumber"
+            required
+            value={formData.medicareNumber}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-500 focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="service"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Service of Interest
           </label>
           <select
@@ -141,7 +231,9 @@ export default function ContactForm() {
             <option value="nursing">Skilled Nursing Care</option>
             <option value="physical-therapy">Physical Therapy</option>
             <option value="personal-care">Personal Care Assistance</option>
-            <option value="medical-equipment">Medical Equipment & Supplies</option>
+            <option value="medical-equipment">
+              Medical Equipment & Supplies
+            </option>
             <option value="occupational-therapy">Occupational Therapy</option>
             <option value="speech-therapy">Speech Therapy</option>
             <option value="other">Other</option>
@@ -149,7 +241,10 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Message *
           </label>
           <textarea
@@ -174,4 +269,4 @@ export default function ContactForm() {
       </form>
     </div>
   )
-} 
+}

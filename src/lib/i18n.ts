@@ -1,4 +1,4 @@
-export const locales = ['en', 'zh', 'es', 'fr'] as const
+export const locales = ['en', 'zh', 'es', 'fr', 'hy', 'ru'] as const
 export type Locale = typeof locales[number]
 
 export const defaultLocale: Locale = 'en'
@@ -8,6 +8,8 @@ export const localeNames: Record<Locale, string> = {
   zh: '中文',
   es: 'Español',
   fr: 'Français',
+  hy: 'Հայերեն',
+  ru: 'Русский',
 }
 
 export const localeFlags: Record<Locale, string> = {
@@ -15,6 +17,8 @@ export const localeFlags: Record<Locale, string> = {
   zh: '🇨🇳',
   es: '🇪🇸',
   fr: '🇫🇷',
+  hy: '🇦🇲',
+  ru: '🇷🇺',
 }
 
 // Navigation translations
@@ -46,6 +50,20 @@ export const navigation = {
     services: 'Services',
     contact: 'Contact',
     getStarted: 'Commencer',
+  },
+  hy: {
+    home: 'Գլխավոր',
+    about: 'Մեր մասին',
+    services: 'Ծառայություններ',
+    contact: 'Կապ',
+    getStarted: 'Սկսել',
+  },
+  ru: {
+    home: 'Главная',
+    about: 'О нас',
+    services: 'Услуги',
+    contact: 'Контакты',
+    getStarted: 'Начать',
   },
 }
 
@@ -83,6 +101,22 @@ export const common = {
     readyToStart: 'Prêt à Commencer ?',
     getStartedToday: 'Commencer Aujourd\'hui',
   },
+  hy: {
+    learnMore: 'Իմանալ ավելին',
+    viewServices: 'Դիտել ծառայությունները',
+    contactUs: 'Կապ մեզ հետ',
+    callNow: 'Զանգել հիմա',
+    readyToStart: 'Պատրա՞ստ եք սկսել',
+    getStartedToday: 'Սկսել այսօր',
+  },
+  ru: {
+    learnMore: 'Узнать больше',
+    viewServices: 'Посмотреть услуги',
+    contactUs: 'Связаться с нами',
+    callNow: 'Позвонить сейчас',
+    readyToStart: 'Готовы начать?',
+    getStartedToday: 'Начать сегодня',
+  },
 }
 
 // Company info translations
@@ -106,6 +140,16 @@ export const company = {
     name: 'VRT Santé à Domicile',
     tagline: 'Soins Professionnels à Domicile',
     description: 'Nous fournissons des services de soins de santé à domicile professionnels et compatissants. Notre équipe expérimentée dispense des soins personnalisés dans le confort de votre maison.',
+  },
+  hy: {
+    name: 'VRT Տնային Առողջապահական Խնամք',
+    tagline: 'Պրոֆեսիոնալ խնամք տանը',
+    description: 'ՄԵՐ ՆՊԱՏԱԿՆ Է ՏԱԼ ԲԱՐՁՐ ՈՐԱԿԻ ԽՆԱՄՔ ՁԵՐ ՏԱՆ ՀԱՇՏԱՐԱՐՈՒԹՅԱՆ ՄԵՋ: Մենք ապահովում ենք համապարփակ տնային ծառայություններ հիվանդների, հաշմանդամների, տարեցների և տնային խնամքի կարիք ունեցող անձանց համար՝ անկախ ռասայից, սեռից, ազգային ծագումից կամ կրոնական պատկանելիությունից:',
+  },
+  ru: {
+    name: 'VRT ДОМАШНИЙ УХОД ЗА ЗДОРОВЬЕМ',
+    tagline: 'Профессиональный уход на дому',
+    description: 'НАША ЦЕЛЬ - ПРЕДОСТАВИТЬ ЛУЧШЕЕ КАЧЕСТВО УХОДА В КОМФОРТЕ ВАШЕГО ДОМА. Мы предоставляем комплексные домашние услуги больным, инвалидам, пожилым людям и прикованным к дому без учета расы, пола, национального происхождения или религиозной принадлежности.',
   },
 }
 

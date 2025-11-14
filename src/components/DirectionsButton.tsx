@@ -2,7 +2,7 @@
 
 const DirectionsButton = () => {
   const handleClick = () => {
-    window.open('https://www.google.com/maps?q=123+Healthcare+Ave+Suite+100+City+State+12345', '_blank')
+    window.open('https://www.google.com/maps?q=600+W+Broadway+suite+240B,+Glendale,+CA+91204', '_blank')
   }
 
   return (
