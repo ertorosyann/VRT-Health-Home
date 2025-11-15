@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 @layer base {
   html {
@@ -11,6 +11,11 @@
   
   body {
     @apply bg-gray-50 text-gray-900;
+  }
+  
+  /* Title font for all headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-roboto-condensed), 'Roboto Condensed', sans-serif !important;
   }
 }
 
@@ -67,10 +72,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    box-shadow: 0 0 20px rgba(34, 115, 105, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(34, 197, 94, 0.6);
+    box-shadow: 0 0 40px rgba(34, 115, 105, 0.6);
   }
 }
 
@@ -91,26 +96,12 @@
     @apply max-w-7xl mx-auto;
   }
   
-  /* Health color utilities */
-  .text-health-50 { @apply text-green-50; }
-  .text-health-100 { @apply text-green-100; }
-  .text-health-200 { @apply text-green-200; }
-  .text-health-500 { @apply text-green-500; }
-  .text-health-600 { @apply text-green-600; }
-  .text-health-700 { @apply text-green-700; }
+  /* Title font utility class */
+  .font-title {
+    font-family: var(--font-roboto-condensed), 'Roboto Condensed', sans-serif !important;
+  }
   
-  .bg-health-50 { @apply bg-green-50; }
-  .bg-health-100 { @apply bg-green-100; }
-  .bg-health-200 { @apply bg-green-200; }
-  .bg-health-500 { @apply bg-green-500; }
-  .bg-health-600 { @apply bg-green-600; }
-  .bg-health-700 { @apply bg-green-700; }
-  
-  .border-health-100 { @apply border-green-100; }
-  .border-health-500 { @apply border-green-500; }
-  .border-health-600 { @apply border-green-600; }
-  .ring-health-200 { @apply ring-green-200; }
-  .ring-health-500 { @apply ring-green-500; }
+  /* Health color utilities - Now defined in tailwind.config.js */
   
   /* Animation utilities */
   .animate-fade-in-up {

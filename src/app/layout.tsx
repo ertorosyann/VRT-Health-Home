@@ -1,10 +1,15 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Roboto_Condensed } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
+const robotoCondensed = Roboto_Condensed({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-roboto-condensed'
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vrthealthhome.com'),
@@ -46,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${robotoCondensed.variable}`}>
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow">

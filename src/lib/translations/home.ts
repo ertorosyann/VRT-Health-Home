@@ -9,6 +9,12 @@ export const homeTranslations = {
       getStarted: 'Get Started Today',
       learnMore: 'Learn More',
     },
+    featureCards: {
+      available247: 'Available',
+      licensed100: 'Licensed',
+      achcAccredited: 'Accredited',
+      trusted: 'Trusted',
+    },
     coreValues: {
       title: 'Our Core Values',
       subtitle: 'We are committed to providing care that is',
@@ -107,6 +113,12 @@ export const homeTranslations = {
       subtitle: 'VRT健康之家在您舒适的家中提供贴心、专业的医疗服务。我们经验丰富的团队致力于您的健康和福祉。',
       getStarted: '今天就开始',
       learnMore: '了解更多',
+    },
+    featureCards: {
+      available247: '全天候',
+      licensed100: '持证',
+      achcAccredited: '认证',
+      trusted: '值得信赖',
     },
     coreValues: {
       title: '我们的核心价值观',
@@ -207,6 +219,12 @@ export const homeTranslations = {
       getStarted: 'Comenzar Hoy',
       learnMore: 'Saber Más',
     },
+    featureCards: {
+      available247: 'Disponible',
+      licensed100: 'Con Licencia',
+      achcAccredited: 'Acreditado',
+      trusted: 'Confiable',
+    },
     coreValues: {
       title: 'Nuestros Valores Fundamentales',
       subtitle: 'Estamos comprometidos a brindar atención que es',
@@ -305,6 +323,12 @@ export const homeTranslations = {
       subtitle: 'VRT Santé à Domicile fournit des services de soins de santé professionnels et compatissants dans le confort de votre maison. Notre équipe expérimentée se consacre à votre santé et à votre bien-être.',
       getStarted: 'Commencer Aujourd\'hui',
       learnMore: 'En Savoir Plus',
+    },
+    featureCards: {
+      available247: 'Disponible',
+      licensed100: 'Autorisé',
+      achcAccredited: 'Accrédité',
+      trusted: 'Fiable',
     },
     coreValues: {
       title: 'Nos Valeurs Fondamentales',
@@ -405,6 +429,12 @@ export const homeTranslations = {
       getStarted: 'Սկսել այսօր',
       learnMore: 'Իմանալ ավելին',
     },
+    featureCards: {
+      available247: 'Հասանելի',
+      licensed100: 'Լիցենզավորված',
+      achcAccredited: 'Հավաստագրված',
+      trusted: 'Վստահելի',
+    },
     coreValues: {
       title: 'Մեր հիմնական արժեքները',
       subtitle: 'Մենք նվիրված ենք ապահովել խնամք, որը',
@@ -503,6 +533,12 @@ export const homeTranslations = {
       subtitle: 'НАША ЦЕЛЬ - ПРЕДОСТАВИТЬ ЛУЧШЕЕ КАЧЕСТВО УХОДА В КОМФОРТЕ ВАШЕГО ДОМА. VRT ДОМАШНИЙ УХОД ЗА ЗДОРОВЬЕМ предоставляет сострадательные, профессиональные услуги здравоохранения. Наша опытная команда посвящена вашему здоровью и благополучию.',
       getStarted: 'Начать сегодня',
       learnMore: 'Узнать больше',
+    },
+    featureCards: {
+      available247: 'Доступно',
+      licensed100: 'Лицензировано',
+      achcAccredited: 'Аккредитовано',
+      trusted: 'Надежно',
     },
     coreValues: {
       title: 'Наши основные ценности',

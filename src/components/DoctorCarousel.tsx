@@ -11,8 +11,6 @@ interface Doctor {
 
 interface TeamMember {
   name: string
-  role: string
-  bio: string
   image: string
 }
 
@@ -23,22 +21,27 @@ interface DoctorCarouselProps {
 const defaultDoctors: Doctor[] = [
   {
     id: 1,
-    image: '/images/doctor 1.jpg',
+    image: '/images/carusel1.png',
     alt: 'Doctor',
   },
   {
     id: 2,
-    image: '/images/doctor2.jpg',
+    image: '/images/carusel2.png',
     alt: 'Doctor',
   },
   {
     id: 3,
-    image: '/images/avatar2.jpg',
+    image: '/images/carusel3.png',
     alt: 'Doctor',
   },
   {
     id: 4,
-    image: '/images/avatar3.jpg',
+    image: '/images/carusel4.png',
+    alt: 'Doctor',
+  },
+  {
+    id: 5,
+    image: '/images/carusel5.png',
     alt: 'Doctor',
   },
 ]
@@ -49,7 +52,6 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
     ? team.map((member, index) => ({
         id: index + 1,
         name: member.name,
-        specialty: member.role,
         image: member.image,
         alt: member.name,
       }))

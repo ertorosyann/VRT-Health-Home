@@ -120,26 +120,23 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-health-50 to-primary-50 section-padding">
+      {/* <section className="bg-gradient-to-br from-health-50 to-primary-50 section-padding">
         <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-            <div className="text-center lg:text-left px-4 sm:px-0">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900  sm:mb-4 md:mb-6 mt-10 ">
                 {getContactTranslation(locale, 'hero.title')}
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg lg:max-w-none mx-auto lg:mx-0">
-                {getContactTranslation(locale, 'hero.subtitle')}
-              </p>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form & Info */}
       <section
         className="section-padding bg-white"
         style={{
-          backgroundImage: "url('/images/contact-us1.png')",
+          backgroundImage: "url('/images/contact-us.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -159,6 +156,8 @@ export default function Contact() {
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 {getContactTranslation(locale, 'contactInfo.subtitle')}
+                <br />
+                {getContactTranslation(locale, 'emergency.description')}
               </p>
 
               <div className="space-y-4 sm:space-y-6">
@@ -178,32 +177,6 @@ export default function Contact() {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-8 p-6 bg-gray-50 rounded-xl">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg
-                      className="w-6 h-6 text-red-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  {getContactTranslation(locale, 'emergency.description')}
-                </p>
-                <div className="text-2xl font-bold text-health-600">
-                  {getContactTranslation(locale, 'emergency.phoneNumber')}
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -222,24 +195,15 @@ export default function Contact() {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-sm">
+            <div className="bg-gray-50 rounded-2xl  shadow-sm">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Map */}
-                <div className="w-full">
-                  {/* <iframe
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dgsWUxOykUxSyg&q=600+W+Broadway,+Glendale,+CA+91204"
-                    width="100%"
-                    height="400"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    className="rounded-xl shadow-lg"
-                  ></iframe> */}
-                  <Map height="400px" />
+                <div className="w-full ">
+                  <Map height="520px" />
                 </div>
 
                 {/* Location Information */}
-                <div className="space-y-6">
+                <div className="space-y-6 p-8">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {getContactTranslation(locale, 'map.locationTitle')}
@@ -333,7 +297,7 @@ export default function Contact() {
                         <h4 className="font-semibold text-gray-900 mb-1">
                           {getContactTranslation(locale, 'map.phone')}
                         </h4>
-                        <p className="text-gray-600">(818) 484-7508</p>
+                        <p className="text-gray-600">+1 (818) 484-7508</p>
                       </div>
                     </div>
                   </div>
@@ -349,7 +313,15 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding bg-gray-50">
+      <section
+        className="section-padding"
+        style={{
+          backgroundImage: "url('/images/fac.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

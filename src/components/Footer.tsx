@@ -136,7 +136,7 @@ const Footer = () => {
               <div className="flex flex-col items-center lg:items-start mb-6">
                 <div className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-32 lg:h-28 rounded-xl flex items-center justify-center mb-4">
                   <Image
-                    src="/images/logo.webp"
+                    src="/images/logo.jpg"
                     alt="VRT HOME HEALTH CARE Logo"
                     width={148}
                     height={78}
@@ -218,13 +218,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div>
                   <p className="text-gray-600 text-sm">Email:</p>
-                  <p className="text-gray-900 font-medium">
-                    info@vrthealth.com
-                  </p>
+                  <p className="text-gray-900 font-medium">vrtcare@gmail.com</p>
                 </div>
                 <div>
                   <p className="text-gray-600 text-sm">Phone:</p>
                   <p className="text-gray-900 font-medium">+1 (818) 484-7508</p>
+                </div>
+                <div>
+                  <p className="text-gray-600 text-sm">Fax:</p>
+                  <p className="text-gray-900 font-medium">+1 (818) 484-5806</p>
                 </div>
               </div>
             </div>

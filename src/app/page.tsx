@@ -14,27 +14,76 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Doctor Carousel Section - Moved to Top */}
+      {/* Title Section - First after header */}
+      <section className="relative bg-white py-8 sm:py-12 md:py-16">
+        <div className="container-max text-center px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight animate-fade-in-up">
+            {getHomeTranslation(locale, 'hero.title')}{' '}
+            <span className="text-health-600">
+              {getHomeTranslation(locale, 'hero.titleHighlight')}
+            </span>
+          </h1>
+        </div>
+      </section>
+
+      {/* Doctor Carousel Section */}
       <section className="relative bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-health-50/30 to-transparent z-0"></div>
         <div className="relative z-10">
-          <div className="text-center pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 sm:mb-12">
+          <DoctorCarousel />
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="section-padding">
+        <div className="container-max">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 px-4 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+              {getHomeTranslation(locale, 'coreValues.title')}
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              {getHomeTranslation(locale, 'coreValues.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
+            {getHomeTranslation(locale, 'coreValues.values').map(
+              (value: any, index: number) => (
+                <div
+                  key={index}
+                  className="text-center group transform transition-all duration-300 hover:scale-105 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="bg-gradient-to-br from-white to-health-50/30 rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border border-health-100/50">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-health-500 to-health-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-health-600 group-hover:to-health-700 transition-all duration-300 shadow-lg animate-pulse-glow">
+                      <span className="text-3xl sm:text-4xl font-bold text-white">
+                        {value.word.charAt(0)}
+                      </span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-health-600 mb-4 sm:mb-6">
+                      {value.word}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Statement Section with Buttons and Feature Cards */}
+      <section className="relative bg-white overflow-hidden py-2 sm:py-4 md:py-8">
+        {/* Background in two corners */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-health-100/70 to-health-200/50 rounded-br-3xl z-0"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-[#268685]/30 to-[#268685]/50 rounded-tl-3xl z-0"></div>
+        <div className="relative z-10">
+          <div className="text-center pb-6 sm:pb-8 px-4 overflow-x-visible">
+            <div className="max-w-5xl mx-auto overflow-x-visible">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 sm:mb-12 overflow-x-visible">
                 {/* Left side - Text content */}
-                <div className="text-center lg:text-left animate-fade-in-up">
-                  <h1
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-3 sm:mb-4 leading-tight tracking-tight"
-                    style={{
-                      animationDelay: '0.1s',
-                      fontFamily: "'Montserrat', sans-serif",
-                    }}
-                  >
-                    {getHomeTranslation(locale, 'hero.title')}{' '}
-                    <span className="text-health-600">
-                      {getHomeTranslation(locale, 'hero.titleHighlight')}
-                    </span>
-                  </h1>
+                <div className="text-center lg:text-left animate-fade-in-up -ml-2 lg:-ml-4">
                   <p
                     className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed"
                     style={{ animationDelay: '0.2s' }}
@@ -71,7 +120,10 @@ export default function HomePage() {
                         24/7
                       </div>
                       <div className="text-xs sm:text-sm text-white/90 font-medium text-center">
-                        Available
+                        {getHomeTranslation(
+                          locale,
+                          'featureCards.available247'
+                        )}
                       </div>
                     </div>
                     <div
@@ -82,7 +134,7 @@ export default function HomePage() {
                         100%
                       </div>
                       <div className="text-xs sm:text-sm text-white/90 font-medium text-center">
-                        Licensed
+                        {getHomeTranslation(locale, 'featureCards.licensed100')}
                       </div>
                     </div>
                     <div
@@ -93,7 +145,10 @@ export default function HomePage() {
                         ACHC
                       </div>
                       <div className="text-xs sm:text-sm text-white/90 font-medium text-center">
-                        Accredited
+                        {getHomeTranslation(
+                          locale,
+                          'featureCards.achcAccredited'
+                        )}
                       </div>
                     </div>
                     <div
@@ -104,7 +159,7 @@ export default function HomePage() {
                         ✓
                       </div>
                       <div className="text-xs sm:text-sm text-white/90 font-medium text-center">
-                        Trusted
+                        {getHomeTranslation(locale, 'featureCards.trusted')}
                       </div>
                     </div>
                   </div>
@@ -130,7 +185,10 @@ export default function HomePage() {
                           24/7
                         </div>
                         <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                          Available
+                          {getHomeTranslation(
+                            locale,
+                            'featureCards.available247'
+                          )}
                         </div>
                       </div>
                       <div
@@ -141,7 +199,10 @@ export default function HomePage() {
                           100%
                         </div>
                         <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                          Licensed
+                          {getHomeTranslation(
+                            locale,
+                            'featureCards.licensed100'
+                          )}
                         </div>
                       </div>
                       <div
@@ -152,7 +213,10 @@ export default function HomePage() {
                           ACHC
                         </div>
                         <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                          Accredited
+                          {getHomeTranslation(
+                            locale,
+                            'featureCards.achcAccredited'
+                          )}
                         </div>
                       </div>
                       <div
@@ -163,7 +227,7 @@ export default function HomePage() {
                           ✓
                         </div>
                         <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                          Trusted
+                          {getHomeTranslation(locale, 'featureCards.trusted')}
                         </div>
                       </div>
                     </div>
@@ -172,14 +236,21 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <DoctorCarousel />
         </div>
       </section>
 
       {/* Why Choose Section - Compact and Attractive */}
-      <section className="section-padding bg-gradient-to-br from-white via-health-50/50 to-primary-50/50">
+      <section
+        className="section-padding"
+        style={{
+          backgroundImage: 'url(/images/hands.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div className="container-max">
-          <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 max-w-5xl mx-auto animate-fade-in-up">
+          <div className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 max-w-5xl mx-auto animate-fade-in-up">
             <div className="text-center mb-8 sm:mb-10">
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-health-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 animate-pulse-glow">
                 <svg
@@ -196,10 +267,7 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h2
-                className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 sm:mb-6 tracking-tight"
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 sm:mb-6 tracking-tight">
                 {getHomeTranslation(locale, 'whyChoose.title')}
               </h2>
             </div>
@@ -233,87 +301,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Core Values Section */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <div className="text-center mb-10 sm:mb-12 md:mb-16 px-4 animate-fade-in-up">
-            <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
-            >
-              {getHomeTranslation(locale, 'coreValues.title')}
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {getHomeTranslation(locale, 'coreValues.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
-            {getHomeTranslation(locale, 'coreValues.values').map(
-              (value: any, index: number) => (
-                <div
-                  key={index}
-                  className="text-center group transform transition-all duration-300 hover:scale-105 animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <div className="bg-gradient-to-br from-white to-health-50/30 rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border border-health-100/50">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-health-500 to-health-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-health-600 group-hover:to-health-700 transition-all duration-300 shadow-lg animate-pulse-glow">
-                      <span className="text-3xl sm:text-4xl font-bold text-white">
-                        {value.word.charAt(0)}
-                      </span>
-                    </div>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-health-600 mb-4 sm:mb-6">
-                      {value.word}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              )
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Priority Section */}
-      <section className="section-padding bg-gradient-to-br from-health-50/50 via-white to-primary-50/30">
-        <div className="container-max">
-          <div className="text-center max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="bg-white rounded-3xl shadow-xl p-8 sm:p-10 md:p-12 border border-health-100/50 animate-fade-in-up relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 opacity-10 animate-float">
-                <Image
-                  src="/images/medical-equipment.svg"
-                  alt="Medical Equipment"
-                  width={256}
-                  height={256}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="relative z-10">
-                <h2
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight tracking-tight"
-                  style={{ fontFamily: "'Montserrat', sans-serif" }}
-                >
-                  {getHomeTranslation(locale, 'prioritySection.title')}
-                </h2>
-                <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
-                  {getHomeTranslation(locale, 'prioritySection.description')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section className="section-padding bg-gradient-to-br from-gray-50 via-white to-health-50/30">
         <div className="container-max">
           <div className="text-center mb-10 sm:mb-12 md:mb-16 px-4 animate-fade-in-up">
-            <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
-            >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
               {getMainTranslation(locale, 'footer.ourServices')}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -321,9 +313,9 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 px-4 sm:px-0">
             {/* Nursing Care */}
-            <div className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up">
+            <div className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]">
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
                 <Image
                   src="/images/nursing-care.svg"
@@ -340,7 +332,7 @@ export default function HomePage() {
 
             {/* Physical Therapy */}
             <div
-              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up"
+              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.1s' }}
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
@@ -359,7 +351,7 @@ export default function HomePage() {
 
             {/* Occupational Therapy */}
             <div
-              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up"
+              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.2s' }}
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
@@ -371,17 +363,14 @@ export default function HomePage() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3
-                className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight"
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
+              <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.occupationalTherapy')}
               </h3>
             </div>
 
             {/* Speech Therapy */}
             <div
-              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up"
+              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.3s' }}
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
@@ -400,7 +389,7 @@ export default function HomePage() {
 
             {/* Personal Care */}
             <div
-              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up"
+              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.4s' }}
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
@@ -419,7 +408,7 @@ export default function HomePage() {
 
             {/* Dietician */}
             <div
-              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up"
+              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.5s' }}
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
@@ -438,7 +427,7 @@ export default function HomePage() {
 
             {/* Medical Social Services */}
             <div
-              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl col-span-2 sm:col-span-1 animate-fade-in-up"
+              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.6s' }}
             >
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
@@ -453,6 +442,143 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.medicalSocialServices')}
               </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Priority & Accreditation Section - Side by Side */}
+      <section className="section-padding bg-gradient-to-br from-health-50/50 via-white to-[#268685]">
+        <div className="container-max">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-8 px-4 sm:px-6">
+            {/* Priority Section */}
+            <div className="bg-white rounded-3xl shadow-xl p-8 sm:p-10 md:p-12 border border-health-100/50 animate-fade-in-up relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 opacity-10 animate-float">
+                <Image
+                  src="/images/medical-equipment.svg"
+                  alt="Medical Equipment"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="relative z-10">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight tracking-tight">
+                  {getHomeTranslation(locale, 'prioritySection.title')}
+                </h2>
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mt-24 mb:mt-0">
+                  {getHomeTranslation(locale, 'prioritySection.description')}
+                </p>
+              </div>
+            </div>
+
+            {/* Accreditation & Licensing Section */}
+            <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 border border-health-100/50 animate-fade-in-up">
+              <div className="text-center mb-8 sm:mb-10">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-health-500 to-health-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                  <svg
+                    className="w-8 h-8 sm:w-10 sm:h-10 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+                  {getHomeTranslation(locale, 'accreditation.title')}
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                  {getHomeTranslation(locale, 'accreditation.subtitle')}
+                </p>
+              </div>
+
+              <div className="space-y-4 sm:space-y-6">
+                {/* ACHC Accredited */}
+                <div className="flex items-center p-5 sm:p-6 bg-gradient-to-r from-health-50 to-primary-50 rounded-xl border-l-4 border-health-600 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex-shrink-0 mr-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[rgb(34,115,105)] rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
+                    {getHomeTranslation(locale, 'accreditation.achcAccredited')}
+                  </p>
+                </div>
+
+                {/* CDPH Licensed & ACHC Accredited */}
+                <div className="flex items-start sm:items-center p-5 sm:p-6 bg-gradient-to-r from-health-50 to-primary-50 rounded-xl border-l-4 border-health-600 shadow-md hover:shadow-lg transition-all duration-300">
+                  <div className="flex-shrink-0 mr-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[rgb(34,115,105)] rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2">
+                      {getHomeTranslation(
+                        locale,
+                        'accreditation.licensedAndAccredited'
+                      )}
+                    </p>
+                    <a
+                      href={getHomeTranslation(
+                        locale,
+                        'accreditation.cdphLink'
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-health-600 hover:text-health-700 font-medium text-xs sm:text-sm inline-flex items-center mt-1 group"
+                    >
+                      {getHomeTranslation(
+                        locale,
+                        'accreditation.learnMoreCDPH'
+                      )}
+                      <svg
+                        className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -536,116 +662,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Accreditation & Licensing Section */}
-      <section className="section-padding bg-gradient-to-br from-health-50/50 via-white to-primary-50/50">
-        <div className="container-max">
-          <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 max-w-4xl mx-auto border border-health-100/50">
-            <div className="text-center mb-8 sm:mb-10">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-health-500 to-health-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
-                <svg
-                  className="w-8 h-8 sm:w-10 sm:h-10 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                {getHomeTranslation(locale, 'accreditation.title')}
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                {getHomeTranslation(locale, 'accreditation.subtitle')}
-              </p>
-            </div>
-
-            <div className="space-y-4 sm:space-y-6">
-              {/* ACHC Accredited */}
-              <div className="flex items-center p-5 sm:p-6 bg-gradient-to-r from-health-50 to-primary-50 rounded-xl border-l-4 border-health-600 shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="flex-shrink-0 mr-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-health-600 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
-                  {getHomeTranslation(locale, 'accreditation.achcAccredited')}
-                </p>
-              </div>
-
-              {/* CDPH Licensed & ACHC Accredited */}
-              <div className="flex items-start sm:items-center p-5 sm:p-6 bg-gradient-to-r from-health-50 to-primary-50 rounded-xl border-l-4 border-health-600 shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="flex-shrink-0 mr-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-health-600 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <p
-                    className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-2"
-                    style={{ fontFamily: "'Montserrat', sans-serif" }}
-                  >
-                    {getHomeTranslation(
-                      locale,
-                      'accreditation.licensedAndAccredited'
-                    )}
-                  </p>
-                  <a
-                    href={getHomeTranslation(locale, 'accreditation.cdphLink')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-health-600 hover:text-health-700 font-medium text-xs sm:text-sm inline-flex items-center mt-1 group"
-                  >
-                    {getHomeTranslation(locale, 'accreditation.learnMoreCDPH')}
-                    <svg
-                      className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-br from-health-600 via-health-500 to-primary-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -673,10 +689,7 @@ export default function HomePage() {
         </div>
         <div className="container-max text-center px-4 relative z-10">
           <div className="max-w-3xl mx-auto animate-fade-in-up">
-            <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
-            >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               {getHomeTranslation(locale, 'cta.title')}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10 leading-relaxed">

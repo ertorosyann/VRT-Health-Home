@@ -82,10 +82,10 @@ export default function ContactForm() {
       </h2>
 
       {submitSuccess && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+        <div className="mb-6 p-4 bg-health-50 border border-health-200 rounded-lg">
           <div className="flex items-center">
             <svg
-              className="w-5 h-5 text-green-400 mr-2"
+              className="w-5 h-5 text-health-400 mr-2"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -95,7 +95,7 @@ export default function ContactForm() {
                 clipRule="evenodd"
               />
             </svg>
-            <span className="text-green-800 font-medium">
+            <span className="text-health-800 font-medium">
               Thank you! Your message has been sent successfully. We'll get back
               to you soon.
             </span>

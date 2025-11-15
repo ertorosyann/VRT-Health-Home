@@ -14,27 +14,23 @@ export default function About() {
   const team = [
     {
       name: 'Dr. Sarah Williams',
-      role: 'Medical Director',
-      bio: 'Dr. Williams brings over 15 years of experience in home healthcare, specializing in geriatric care and chronic disease management.',
-      image: '/images/doctor 1.jpg',
+      image: '/images/carusel1.png',
     },
     {
       name: 'Michael Rodriguez',
-      role: 'Director of Nursing',
-      bio: 'Michael leads our nursing team with expertise in home health nursing and patient care coordination.',
-      image: '/images/doctor2.jpg',
+      image: '/images/carusel2.png',
     },
     {
       name: 'Lisa Chen',
-      role: 'Physical Therapy Manager',
-      bio: 'Lisa specializes in home-based physical therapy and rehabilitation programs for patients of all ages.',
-      image: '/images/avatar2.jpg',
+      image: '/images/carusel3.png',
     },
     {
       name: 'Dr. James Wilson',
-      role: 'Chief Operations Officer',
-      bio: 'Dr. Wilson oversees our daily operations and ensures the highest standards of care delivery across all services.',
-      image: '/images/avatar3.jpg',
+      image: '/images/carusel4.png',
+    },
+    {
+      name: 'Dr. James Wilson',
+      image: '/images/carusel5.png',
     },
   ]
 
@@ -124,10 +120,10 @@ export default function About() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/doctor6.jpg"
+            src="/images/about.png"
             alt="Healthcare Background"
             fill
-            className="object-cover opacity-80"
+            className="object-cover opacity-90"
             priority
           />
           {/* <div className="absolute inset-0 bg-gradient-to-br from-health-50/80 to-primary-50/80"></div> */}
@@ -135,7 +131,7 @@ export default function About() {
 
         <div className="container-max relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="text-center lg:text-left px-4 md:px-0">
+            <div className="text-center lg:text-left px-4 md:px-0 lg:-ml-25">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 bg-gradient-to-r from-health-600 to-primary-600 bg-clip-text text-transparent leading-tight">
                 {getAboutTranslation(locale, 'hero.title')}
               </h1>
@@ -197,30 +193,6 @@ export default function About() {
                 <p className="text-gray-600 leading-relaxed">
                   {getAboutTranslation(locale, 'mission.whyWeDoText')}
                 </p>
-
-                {/* Mission Image */}
-                <div className="mt-6">
-                  <div className="w-full max-w-xs mx-auto bg-gradient-to-br from-health-200 to-primary-200 rounded-xl shadow-md p-6">
-                    <div className="w-16 h-16 bg-health-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <svg
-                        className="w-8 h-8 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-health-700 font-medium">
-                      {getAboutTranslation(locale, 'mission.qualityCare')}
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -228,13 +200,22 @@ export default function About() {
       </section>
 
       {/* Team Approach */}
-      <section className="section-padding bg-gradient-to-br from-health-50 to-primary-50">
+      {/* <section className="section-padding bg-gradient-to-br from-health-50 to-primary-50"> */}
+      <section
+        className="section-padding"
+        style={{
+          backgroundImage: "url('/images/team.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div className="container-max">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16 bg-white/40 rounded-2xl p-3">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {getAboutTranslation(locale, 'mission.teamApproach')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl font-medium text-gray-900 max-w-3xl mx-auto">
               {getAboutTranslation(locale, 'mission.teamApproachText')}
             </p>
           </div>
@@ -318,6 +299,19 @@ export default function About() {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {getAboutTranslation(locale, 'team.subtitle')}
+            </h2>
+          </div>
+        </div>
+        {/* Team Carousel */}
+        <DoctorCarousel team={team} />
+      </section>
+
       {/* Values Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-max">
@@ -351,24 +345,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {getAboutTranslation(locale, 'team.subtitle')}
-            </h2>
-          </div>
-
-          {/* Team Carousel */}
-          <div className="mb-12">
-            <DoctorCarousel team={team} />
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
-      <section className="section-padding bg-health-600">
+      <section className="section-padding bg-[rgb(34,115,105)]">
         <div className="container-max">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>

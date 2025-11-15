@@ -104,7 +104,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-white">
+      <section className="bg-gradient-to-br from-health-50 to-primary-50 section-padding">
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-3 auto-rows-auto gap-6 sm:gap-8 px-4 sm:px-0">
             {services.map((service: any, index: number) => {
@@ -146,7 +146,7 @@ export default function Services() {
                 <div
                   key={index}
                   id={serviceId}
-                  className={`bg-gray-50 rounded-xl sm:rounded-2xl ${paddingClass} hover:shadow-lg transition-shadow duration-300 scroll-mt-20 ${gridClasses}`}
+                  className={`bg-[#e6fbfc] rounded-xl sm:rounded-2xl ${paddingClass} hover:shadow-lg transition-shadow duration-300 scroll-mt-20 ${gridClasses}`}
                 >
                   {/* Service Image */}
                   <div className="mb-4 sm:mb-6">
@@ -273,15 +273,27 @@ export default function Services() {
         <div className="absolute inset-0"></div>
         <div className="container-max relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-health-800 mb-4 ml-auto">
               {getServicesTranslation(locale, 'whoNeedsCare.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              {getServicesTranslation(locale, 'whoNeedsCare.subtitle')}
+            <p className="text-xl text-gray-600 max-w-4xl ml-auto">
+              {getServicesTranslation(locale, 'whoNeedsCare.subtitle')
+                .split(' meet ')
+                .map((part: string, index: number, array: string[]) => (
+                  <span key={index}>
+                    {part}
+                    {index < array.length - 1 && (
+                      <>
+                        {' meet'}
+                        <br />
+                      </>
+                    )}
+                  </span>
+                ))}
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl ml-auto">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
@@ -397,7 +409,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step: any, index: number) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-health-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[rgb(34,115,105)] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">
                     {step.step}
                   </span>
@@ -457,12 +469,7 @@ export default function Services() {
               }}
             >
               <div className="text-center bg-white/60 rounded-2xl p-3">
-                <h3
-                  className="text-2xl font-bold text-gray-900 mb-4"
-                  style={{
-                    fontFamily: "'Montserrat', sans-serif",
-                  }}
-                >
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {getServicesTranslation(locale, 'coverage.coverageTitle')}
                 </h3>
                 <p className="font-medium text-gray-900 leading-relaxed mb-4">
@@ -481,7 +488,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-health-600">
+      <section className="section-padding bg-[rgb(34,115,105)]">
         <div className="container-max text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {getServicesTranslation(locale, 'cta.title')}
