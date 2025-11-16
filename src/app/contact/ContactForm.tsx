@@ -16,6 +16,14 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
+  const [emailError, setEmailError] = useState<string | null>(null)
+
+  // Email validation function
+  const validateEmail = (email: string): boolean => {
+    if (!email) return true // Email is optional, so empty is valid
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -27,12 +35,28 @@ export default function ContactForm() {
       ...prev,
       [name]: value,
     }))
+
+    // Validate email in real-time
+    if (name === 'email') {
+      if (value && !validateEmail(value)) {
+        setEmailError('Please enter a valid email address')
+      } else {
+        setEmailError(null)
+      }
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitError(null)
+
+    // Validate email before submission
+    if (formData.email && !validateEmail(formData.email)) {
+      setEmailError('Please enter a valid email address')
+      setIsSubmitting(false)
+      return
+    }
 
     try {
       const response = await fetch('/api/contact', {
@@ -52,17 +76,20 @@ export default function ContactForm() {
       setIsSubmitting(false)
       setSubmitSuccess(true)
 
-      // Reset form after success
+      // Reset form immediately after success
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        medicareNumber: '',
+        service: '',
+        message: '',
+      })
+      setEmailError(null)
+
+      // Hide success message after 3 seconds
       setTimeout(() => {
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          medicareNumber: '',
-          service: '',
-          message: '',
-        })
         setSubmitSuccess(false)
       }, 3000)
     } catch (error) {
@@ -174,8 +201,15 @@ export default function ContactForm() {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-500 focus:border-transparent transition-colors duration-200"
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-health-500 focus:border-transparent transition-colors duration-200 ${
+                emailError
+                  ? 'border-red-300 focus:ring-red-500'
+                  : 'border-gray-300'
+              }`}
             />
+            {emailError && (
+              <p className="mt-1 text-sm text-red-600">{emailError}</p>
+            )}
           </div>
           <div>
             <label

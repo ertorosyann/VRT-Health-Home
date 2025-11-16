@@ -50,42 +50,42 @@ const defaultDoctors: Doctor[] = [
   {
     id: 1,
     image: '/carusel/c1.jpg',
-    alt: 'Doctor',
+    alt: 'Professional home health care nurse providing compassionate care to patient at home',
   },
   {
     id: 3,
     image: '/carusel/c3.jpg',
-    alt: 'Doctor',
+    alt: 'Experienced healthcare professional delivering home health care services',
   },
   {
     id: 8,
     image: '/carusel/c8.jpg',
-    alt: 'Doctor',
+    alt: 'Qualified home health care provider assisting patient with medical care',
   },
   {
     id: 2,
     image: '/carusel/c2.jpg',
-    alt: 'Doctor',
+    alt: 'Skilled nursing care professional providing home health services',
   },
   {
     id: 4,
     image: '/carusel/c4.webp',
-    alt: 'Doctor',
+    alt: 'Home health care team member delivering personalized healthcare at home',
   },
   {
     id: 7,
     image: '/carusel/c7.JPG',
-    alt: 'Doctor',
+    alt: 'Certified home health aide providing quality home care services',
   },
   {
     id: 5,
     image: '/carusel/c5.png',
-    alt: 'Doctor',
+    alt: 'Professional healthcare worker offering home health care assistance',
   },
   {
     id: 6,
     image: '/carusel/c6.png',
-    alt: 'Doctor',
+    alt: 'Compassionate home health care professional supporting patient wellness',
   },
 ]
 

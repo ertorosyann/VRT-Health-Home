@@ -258,8 +258,8 @@ The website is fully responsive with breakpoints:
 ## 📞 Support
 
 For questions or support:
-- Email: info@vrthealthhome.com
-- Phone: (555) 123-4567
+- Email: vrtcare@gmail.com
+- Phone: +1 (818) 484-5806
 
 ## 📄 License
 

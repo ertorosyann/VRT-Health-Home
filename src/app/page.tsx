@@ -174,7 +174,7 @@ export default function HomePage() {
                     <div className="absolute inset-0 opacity-20">
                       <Image
                         src="/images/hero-healthcare.svg"
-                        alt="Healthcare"
+                        alt="VRT HOME HEALTH CARE - Professional home healthcare services including skilled nursing, physical therapy, and personal care"
                         fill
                         className="object-contain"
                       />

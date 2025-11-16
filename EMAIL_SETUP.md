@@ -22,7 +22,7 @@ To enable email functionality for the contact form, you need to configure email 
 
 ## Notes
 
-- The contact form will send emails to: **ertorosyann@gmail.com**
+- The contact form will send emails to: **vrtcare@gmail.com**
 - Make sure your `.env.local` file is in `.gitignore` (it should be by default)
 - Never commit your actual email credentials to version control
 

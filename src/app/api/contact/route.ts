@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: emailUser,
       replyTo: email || emailUser, // Replies will go to user's email
-      to: 'ertorosyann@gmail.com',
+      to: 'vrtcare@gmail.com',
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
