@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-[rgb(34,115,105)] shadow-sm border-b border-gray-200 min-h-[120px] sm:min-h-[140px] md:min-h-[120px] lg:min-h-[150px] flex items-center relative z-50">
+      <header className="bg-[rgb(2,199,197)] shadow-sm border-b border-gray-200 min-h-[120px] sm:min-h-[140px] md:min-h-[120px] lg:min-h-[150px] flex items-center relative z-50">
         <div className="container-max mx-auto w-full">
           <div className="flex justify-between items-center py-3 sm:py-4 md:py-3 lg:py-4 px-4 sm:px-6 md:px-4 lg:px-0">
             {/* Logo */}
@@ -116,12 +116,12 @@ const Header = () => {
 
               {/* Enhanced CTA Button */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-[rgb(42,125,115)] via-[rgb(38,120,110)] to-[rgb(34,115,105)] rounded-lg sm:rounded-xl md:rounded-lg lg:rounded-xl blur-sm group-hover:blur-md transition-all duration-500 opacity-60"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[rgb(42,125,115)] via-[rgb(38,120,110)] to-[rgb(34,115,105)] rounded-lg sm:rounded-xl md:rounded-lg lg:rounded-xl blur-md group-hover:blur-lg transition-all duration-700 opacity-30"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[rgb(42,125,115)] via-[rgb(38,120,110)] to-[rgb(2,199,197)] rounded-lg sm:rounded-xl md:rounded-lg lg:rounded-xl blur-sm group-hover:blur-md transition-all duration-500 opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[rgb(42,125,115)] via-[rgb(38,120,110)] to-[rgb(2,199,197)] rounded-lg sm:rounded-xl md:rounded-lg lg:rounded-xl blur-md group-hover:blur-lg transition-all duration-700 opacity-30"></div>
 
                 <button
                   onClick={() => handleNavigation('/contact')}
-                  className="relative bg-gradient-to-r from-[rgb(38,120,110)] via-[rgb(34,115,105)] to-[rgb(28,95,85)] hover:from-[rgb(34,115,105)] hover:via-[rgb(28,95,85)] hover:to-[rgb(22,75,65)] text-white font-bold px-4 sm:px-8 md:px-4 lg:px-8 py-2 sm:py-4 md:py-2 lg:py-4 rounded-lg sm:rounded-xl md:rounded-lg lg:rounded-xl  hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 border border-white/30 cursor-pointer flex items-center space-x-2 sm:space-x-3 md:space-x-2 lg:space-x-3 overflow-hidden"
+                  className="relative bg-gradient-to-r from-[rgb(38,120,110)] via-[rgb(2,199,197)] to-[rgb(28,95,85)] hover:from-[rgb(2,199,197)] hover:via-[rgb(28,95,85)] hover:to-[rgb(22,75,65)] text-white font-bold px-4 sm:px-8 md:px-4 lg:px-8 py-2 sm:py-4 md:py-2 lg:py-4 rounded-lg sm:rounded-xl md:rounded-lg lg:rounded-xl  hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 border border-white/30 cursor-pointer flex items-center space-x-2 sm:space-x-3 md:space-x-2 lg:space-x-3 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
@@ -194,7 +194,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 h-full w-full bg-gradient-to-b from-[rgb(34,115,105)] to-[rgb(28,95,85)] shadow-2xl z-50 transform transition-all duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 h-full w-full bg-gradient-to-b from-[rgb(2,199,197)] to-[rgb(28,95,85)] shadow-2xl z-50 transform transition-all duration-300 ease-in-out md:hidden ${
           isMobileMenuOpen
             ? 'scale-100 opacity-100'
             : 'scale-95 opacity-0 pointer-events-none'
@@ -340,7 +340,7 @@ const Header = () => {
             {/* CTA Button for Mobile */}
             {/* <button
               onClick={() => handleNavigation('/contact')}
-              className="w-full bg-gradient-to-r from-[rgb(42,125,115)] to-[rgb(38,120,110)] hover:from-[rgb(38,120,110)] hover:to-[rgb(34,115,105)] text-white font-bold py-4 sm:py-5 md:py-4 px-6 sm:px-7 md:px-6 rounded-xl sm:rounded-2xl md:rounded-xl shadow-lg sm:shadow-xl md:shadow-lg hover:shadow-xl sm:hover:shadow-2xl md:hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 md:space-x-2 text-base sm:text-lg md:text-base"
+              className="w-full bg-gradient-to-r from-[rgb(42,125,115)] to-[rgb(38,120,110)] hover:from-[rgb(38,120,110)] hover:to-[rgb(2,199,197)] text-white font-bold py-4 sm:py-5 md:py-4 px-6 sm:px-7 md:px-6 rounded-xl sm:rounded-2xl md:rounded-xl shadow-lg sm:shadow-xl md:shadow-lg hover:shadow-xl sm:hover:shadow-2xl md:hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 md:space-x-2 text-base sm:text-lg md:text-base"
             >
               <span>{navigation[currentLocale as keyof typeof navigation].getStarted}</span>
               <svg className="w-5 h-5 sm:w-6 md:w-5 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

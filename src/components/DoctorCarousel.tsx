@@ -18,30 +18,73 @@ interface DoctorCarouselProps {
   team?: TeamMember[]
 }
 
+// const defaultDoctors: Doctor[] = [
+//   {
+//     id: 1,
+//     image: '/images/carusel1.png',
+//     alt: 'Doctor',
+//   },
+//   {
+//     id: 2,
+//     image: '/images/carusel2.png',
+//     alt: 'Doctor',
+//   },
+//   {
+//     id: 3,
+//     image: '/images/carusel3.png',
+//     alt: 'Doctor',
+//   },
+//   {
+//     id: 4,
+//     image: '/images/carusel4.png',
+//     alt: 'Doctor',
+//   },
+//   {
+//     id: 5,
+//     image: '/images/carusel5.png',
+//     alt: 'Doctor',
+//   },
+// ]
+
 const defaultDoctors: Doctor[] = [
   {
     id: 1,
-    image: '/images/carusel1.png',
-    alt: 'Doctor',
-  },
-  {
-    id: 2,
-    image: '/images/carusel2.png',
+    image: '/carusel/c1.jpg',
     alt: 'Doctor',
   },
   {
     id: 3,
-    image: '/images/carusel3.png',
+    image: '/carusel/c3.jpg',
+    alt: 'Doctor',
+  },
+  {
+    id: 8,
+    image: '/carusel/c8.jpg',
+    alt: 'Doctor',
+  },
+  {
+    id: 2,
+    image: '/carusel/c2.jpg',
     alt: 'Doctor',
   },
   {
     id: 4,
-    image: '/images/carusel4.png',
+    image: '/carusel/c4.webp',
+    alt: 'Doctor',
+  },
+  {
+    id: 7,
+    image: '/carusel/c7.JPG',
     alt: 'Doctor',
   },
   {
     id: 5,
-    image: '/images/carusel5.png',
+    image: '/carusel/c5.png',
+    alt: 'Doctor',
+  },
+  {
+    id: 6,
+    image: '/carusel/c6.png',
     alt: 'Doctor',
   },
 ]
@@ -116,7 +159,7 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
   return (
     <div className="relative w-full">
       {/* Carousel Container */}
-      <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl mx-4 sm:mx-8 md:mx-12 lg:mx-16 shadow-2xl">
+      <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl mx-4 sm:mx-8 md:mx-12 lg:mx-16 shadow-2xl bg-white">
         <div
           className="flex transition-all duration-700 ease-in-out"
           style={{
@@ -125,12 +168,12 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
         >
           {doctors.map((doctor, index) => (
             <div key={doctor.id} className="w-full flex-shrink-0">
-              <div className="relative h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-[80vh] w-full">
+              <div className="relative h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-[80vh] w-full bg-white">
                 <Image
                   src={doctor.image}
                   alt={doctor.alt}
                   fill
-                  className="object-cover transition-transform duration-700"
+                  className="object-cover object-center transition-transform duration-700"
                   priority={index === 0}
                 />
                 {/* Enhanced Overlay */}

@@ -14,23 +14,35 @@ export default function About() {
   const team = [
     {
       name: 'Dr. Sarah Williams',
-      image: '/images/carusel1.png',
+      image: '/carusel/c1.jpg',
     },
     {
       name: 'Michael Rodriguez',
-      image: '/images/carusel2.png',
+      image: '/carusel/c2.jpg',
     },
     {
       name: 'Lisa Chen',
-      image: '/images/carusel3.png',
+      image: '/carusel/c3.jpg',
     },
     {
       name: 'Dr. James Wilson',
-      image: '/images/carusel4.png',
+      image: '/carusel/c4.webp',
     },
     {
       name: 'Dr. James Wilson',
-      image: '/images/carusel5.png',
+      image: '/carusel/c5.png',
+    },
+    {
+      name: 'Dr. James Wilson',
+      image: '/carusel/c6.png',
+    },
+    {
+      name: 'Dr. James Wilson',
+      image: '/carusel/c7.JPG',
+    },
+    {
+      name: 'Dr. James Wilson',
+      image: '/carusel/c8.jpg',
     },
   ]
 
@@ -346,7 +358,7 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-[rgb(34,115,105)]">
+      <section className="section-padding bg-[rgb(2,199,197)]">
         <div className="container-max">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>

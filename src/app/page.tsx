@@ -502,7 +502,7 @@ export default function HomePage() {
                 {/* ACHC Accredited */}
                 <div className="flex items-center p-5 sm:p-6 bg-gradient-to-r from-health-50 to-primary-50 rounded-xl border-l-4 border-health-600 shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="flex-shrink-0 mr-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[rgb(34,115,105)] rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[rgb(2,199,197)] rounded-full flex items-center justify-center">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
@@ -526,7 +526,7 @@ export default function HomePage() {
                 {/* CDPH Licensed & ACHC Accredited */}
                 <div className="flex items-start sm:items-center p-5 sm:p-6 bg-gradient-to-r from-health-50 to-primary-50 rounded-xl border-l-4 border-health-600 shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="flex-shrink-0 mr-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[rgb(34,115,105)] rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[rgb(2,199,197)] rounded-full flex items-center justify-center">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"

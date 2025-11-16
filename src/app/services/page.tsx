@@ -94,7 +94,7 @@ export default function Services() {
             </div>
             <div className="text-center order-first lg:order-last mb-6 sm:mb-8 lg:mb-0 px-4 sm:px-0">
               <img
-                src="/images/service-image-2.jpg"
+                src="/carusel/c4.webp"
                 alt="Contact Healthcare Services"
                 className="w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto rounded-xl sm:rounded-2xl shadow-lg"
               />
@@ -173,8 +173,8 @@ export default function Services() {
                     )}
                     {index === 3 && (
                       <img
-                        src="/images/speech-therapist.png"
-                        alt="Medical Equipment & Supplies"
+                        src="/services-img/speech.png"
+                        alt="Speech Therapy"
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}
@@ -409,7 +409,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step: any, index: number) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[rgb(34,115,105)] rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[rgb(2,199,197)] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">
                     {step.step}
                   </span>
@@ -488,7 +488,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-[rgb(34,115,105)]">
+      <section className="section-padding bg-[rgb(2,199,197)]">
         <div className="container-max text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {getServicesTranslation(locale, 'cta.title')}
