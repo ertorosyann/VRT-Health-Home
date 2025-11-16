@@ -206,11 +206,11 @@ const Header = () => {
             <div className="flex items-center space-x-3 sm:space-x-4 md:space-x-3">
               <div className="w-20 h-10 sm:w-30 sm:h-10 md:w-30 flex items-center justify-center">
                 <Image
-                  src="/images/logo.webp"
+                  src="/images/logo.jpg"
                   alt="VRT HOME HEALTH CARE Logo"
-                  width={88}
+                  width={148}
                   height={78}
-                  // className="w-full h-full object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
               {/* <div>

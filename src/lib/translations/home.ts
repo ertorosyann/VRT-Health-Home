@@ -35,7 +35,7 @@ export const homeTranslations = {
     },
     prioritySection: {
       title: 'Your Health, Our Priority — At Home Care You Can Trust',
-      description: 'Meet our expert mobile doctors and family nurse practitioners (FNPs) who bring top-quality care straight to your doorstep. We combine medical excellence with genuine compassion to ensure you receive the best care at home.',
+      description: 'Meet our expert mobile doctors and family nurse practitioners, FNPs, Licensed Registered nurses and vocational nurses, who bring top-quality care straight to your doorstep. We combine medical excellence with genuine compassion to ensure you receive the best care at home.',
     },
     features: {
       title: 'Comprehensive Home Healthcare Services',
@@ -140,7 +140,7 @@ export const homeTranslations = {
     },
     prioritySection: {
       title: '您的健康，我们的优先——值得信赖的居家护理',
-      description: '认识我们的专家移动医生和家庭执业护士（FNPs），他们将优质护理直接送到您的家门口。我们将医疗卓越与真诚的同情心相结合，确保您在家中获得最好的护理。',
+      description: '认识我们的专家移动医生和家庭执业护士、FNPs、持证注册护士和职业护士，他们将优质护理直接送到您的家门口。我们将医疗卓越与真诚的同情心相结合，确保您在家中获得最好的护理。',
     },
     features: {
       title: '全面的居家医疗服务',
@@ -245,7 +245,7 @@ export const homeTranslations = {
     },
     prioritySection: {
       title: 'Su Salud, Nuestra Prioridad — Atención en el Hogar en la Que Puede Confiar',
-      description: 'Conozca a nuestros expertos médicos móviles y enfermeras practicantes de familia (FNPs) que llevan atención de primera calidad directamente a su puerta. Combinamos la excelencia médica con compasión genuina para asegurar que reciba la mejor atención en casa.',
+      description: 'Conozca a nuestros expertos médicos móviles y enfermeras practicantes de familia, FNPs, enfermeras registradas con licencia y enfermeras vocacionales, que llevan atención de primera calidad directamente a su puerta. Combinamos la excelencia médica con compasión genuina para asegurar que reciba la mejor atención en casa.',
     },
     features: {
       title: 'Servicios Integrales de Atención Médica Domiciliaria',
@@ -350,7 +350,7 @@ export const homeTranslations = {
     },
     prioritySection: {
       title: 'Votre Santé, Notre Priorité — Soins à Domicile auxquels Vous Pouvez Faire Confiance',
-      description: 'Rencontrez nos médecins mobiles experts et nos infirmières praticiennes de famille (FNPs) qui apportent des soins de première qualité directement à votre porte. Nous combinons l\'excellence médicale avec une compassion authentique pour vous assurer de recevoir les meilleurs soins à domicile.',
+      description: 'Rencontrez nos médecins mobiles experts et nos infirmières praticiennes de famille, FNPs, infirmières autorisées enregistrées et infirmières professionnelles, qui apportent des soins de première qualité directement à votre porte. Nous combinons l\'excellence médicale avec une compassion authentique pour vous assurer de recevoir les meilleurs soins à domicile.',
     },
     features: {
       title: 'Services Complets de Soins de Santé à Domicile',
@@ -455,7 +455,7 @@ export const homeTranslations = {
     },
     prioritySection: {
       title: 'Ձեր Առողջությունը, Մեր Նախապատվությունը — Տնային Խնամք, որին Կարող Եք Վստահել',
-      description: 'Հանդիպեք մեր փորձառու շարժական բժիշկների և ընտանեկան բուժքույր-բժիշկների (FNPs) հետ, որոնք բարձրորակ խնամք են բերում ուղղակիորեն ձեր դռանը: Մենք համատեղում ենք բժշկական գերազանցությունը իսկական կարեկցանքի հետ՝ ապահովելու համար, որ դուք ստանաք լավագույն խնամքը տանը:',
+      description: 'Հանդիպեք մեր փորձառու շարժական բժիշկների և ընտանեկան բուժքույր-բժիշկների, FNPs, լիցենզավորված գրանցված բուժքույրերի և մասնագիտական բուժքույրերի հետ, որոնք բարձրորակ խնամք են բերում ուղղակիորեն ձեր դռանը: Մենք համատեղում ենք բժշկական գերազանցությունը իսկական կարեկցանքի հետ՝ ապահովելու համար, որ դուք ստանաք լավագույն խնամքը տանը:',
     },
     features: {
       title: 'Համապարփակ Տնային Առողջապահական Ծառայություններ',
@@ -560,7 +560,7 @@ export const homeTranslations = {
     },
     prioritySection: {
       title: 'Ваше Здоровье, Наш Приоритет — Домашний Уход, Которому Вы Можете Доверять',
-      description: 'Познакомьтесь с нашими экспертами-мобильными врачами и семейными медсестрами-практиками (FNPs), которые приносят качественный уход прямо к вашей двери. Мы сочетаем медицинское совершенство с искренним состраданием, чтобы обеспечить вам лучший уход на дому.',
+      description: 'Познакомьтесь с нашими экспертами-мобильными врачами и семейными медсестрами-практиками, FNPs, лицензированными зарегистрированными медсестрами и профессиональными медсестрами, которые приносят качественный уход прямо к вашей двери. Мы сочетаем медицинское совершенство с искренним состраданием, чтобы обеспечить вам лучший уход на дому.',
     },
     features: {
       title: 'Комплексные услуги домашнего здравоохранения',

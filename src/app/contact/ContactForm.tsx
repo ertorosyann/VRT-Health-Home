@@ -1,11 +1,18 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/lib/useLanguage'
+import { getContactTranslation } from '@/lib/translations/contact'
+import { type Locale } from '@/lib/i18n'
 
 export default function ContactForm() {
+  const { currentLocale } = useLanguage()
+  const locale = currentLocale as Locale
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    dateOfBirth: '',
     email: '',
     phone: '',
     medicareNumber: '',
@@ -80,6 +87,7 @@ export default function ContactForm() {
       setFormData({
         firstName: '',
         lastName: '',
+        dateOfBirth: '',
         email: '',
         phone: '',
         medicareNumber: '',
@@ -105,7 +113,7 @@ export default function ContactForm() {
   return (
     <div>
       <h2 className="text-3xl font-bold text-gray-900 mb-6">
-        Send Us a Message
+        {getContactTranslation(locale, 'form.title')}
       </h2>
 
       {submitSuccess && (
@@ -156,7 +164,7 @@ export default function ContactForm() {
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              First Name *
+              {getContactTranslation(locale, 'form.firstName')}
             </label>
             <input
               type="text"
@@ -173,7 +181,7 @@ export default function ContactForm() {
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Last Name *
+              {getContactTranslation(locale, 'form.lastName')}
             </label>
             <input
               type="text"
@@ -187,13 +195,32 @@ export default function ContactForm() {
           </div>
         </div>
 
+        <div>
+          <label
+            htmlFor="dateOfBirth"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            {getContactTranslation(locale, 'form.dateOfBirth')}
+          </label>
+          <input
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            required
+            value={formData.dateOfBirth}
+            onChange={handleInputChange}
+            max={new Date().toISOString().split('T')[0]}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-500 focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Email
+              {getContactTranslation(locale, 'form.email')}
             </label>
             <input
               type="email"
@@ -216,7 +243,7 @@ export default function ContactForm() {
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Phone Number
+              {getContactTranslation(locale, 'form.phone')}
             </label>
             <input
               type="tel"
@@ -234,7 +261,7 @@ export default function ContactForm() {
             htmlFor="medicareNumber"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Medicare Number *
+            {getContactTranslation(locale, 'form.medicareNumber')}
           </label>
           <input
             type="text"
@@ -252,7 +279,7 @@ export default function ContactForm() {
             htmlFor="service"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Service of Interest
+            {getContactTranslation(locale, 'form.service')}
           </label>
           <select
             id="service"
@@ -261,7 +288,9 @@ export default function ContactForm() {
             onChange={handleInputChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-500 focus:border-transparent transition-colors duration-200"
           >
-            <option value="">Select a service</option>
+            <option value="">
+              {getContactTranslation(locale, 'form.selectService')}
+            </option>
             <option value="nursing">Skilled Nursing Care</option>
             <option value="physical-therapy">Physical Therapy</option>
             <option value="personal-care">Personal Care Assistance</option>
@@ -279,13 +308,12 @@ export default function ContactForm() {
             htmlFor="message"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Message *
+            {getContactTranslation(locale, 'form.message')}
           </label>
           <textarea
             id="message"
             name="message"
             rows={5}
-            required
             value={formData.message}
             onChange={handleInputChange}
             placeholder="Tell us about your healthcare needs or ask any questions..."
@@ -298,7 +326,9 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          {isSubmitting
+            ? getContactTranslation(locale, 'form.sending')
+            : getContactTranslation(locale, 'form.sendMessage')}
         </button>
       </form>
     </div>

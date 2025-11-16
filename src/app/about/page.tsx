@@ -144,7 +144,7 @@ export default function About() {
         <div className="container-max relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left px-4 md:px-0 lg:-ml-25">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6 bg-gradient-to-r from-health-600 to-primary-600 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 md:mb-6 bg-gradient-to-r from-health-600 to-primary-600 bg-clip-text text-transparent leading-tight lg:text-nowrap">
                 {getAboutTranslation(locale, 'hero.title')}
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg lg:max-w-none mx-auto lg:mx-0">
@@ -250,11 +250,10 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Individual & Family
+                {getAboutTranslation(locale, 'mission.teamCard1Title')}
               </h3>
               <p className="text-gray-600">
-                The patient and their loved ones are at the center of our care
-                team
+                {getAboutTranslation(locale, 'mission.teamCard1Description')}
               </p>
             </div>
 
@@ -275,11 +274,10 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Healthcare Providers
+                {getAboutTranslation(locale, 'mission.teamCard2Title')}
               </h3>
               <p className="text-gray-600">
-                Physicians, nurses, therapists, social workers, and home health
-                aides
+                {getAboutTranslation(locale, 'mission.teamCard2Description')}
               </p>
             </div>
 
@@ -300,11 +298,10 @@ export default function About() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                VRT as Liaison
+                {getAboutTranslation(locale, 'mission.teamCard3Title')}
               </h3>
               <p className="text-gray-600">
-                We coordinate and facilitate communication between all team
-                members
+                {getAboutTranslation(locale, 'mission.teamCard3Description')}
               </p>
             </div>
           </div>

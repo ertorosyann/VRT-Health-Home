@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import CTAButtons from '@/components/CTAButtons'
 import NavigationButton from '@/components/NavigationButton'
 import { useLanguage } from '@/lib/useLanguage'
@@ -93,9 +94,11 @@ export default function Services() {
               </p>
             </div>
             <div className="text-center order-first lg:order-last mb-6 sm:mb-8 lg:mb-0 px-4 sm:px-0">
-              <img
+              <Image
                 src="/carusel/c4.webp"
                 alt="Contact Healthcare Services"
+                width={600}
+                height={400}
                 className="w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto rounded-xl sm:rounded-2xl shadow-lg"
               />
             </div>
@@ -151,51 +154,65 @@ export default function Services() {
                   {/* Service Image */}
                   <div className="mb-4 sm:mb-6">
                     {index === 0 && (
-                      <img
+                      <Image
                         src="/images/skilled-nurses-service.png"
                         alt="Skilled Nursing Care"
+                        width={600}
+                        height={400}
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}
                     {index === 1 && (
-                      <img
+                      <Image
                         src="/images/physical-therapy.png"
                         alt="Physical Therapy"
+                        width={600}
+                        height={400}
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}
                     {index === 2 && (
-                      <img
+                      <Image
                         src="/images/occupational-therapist.png"
                         alt="Personal Care Assistance"
+                        width={600}
+                        height={400}
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}
                     {index === 3 && (
-                      <img
+                      <Image
                         src="/services-img/speech.png"
                         alt="Speech Therapy"
+                        width={600}
+                        height={400}
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}
                     {index === 4 && (
-                      <img
+                      <Image
                         src="/images/dietician.png"
                         alt="Occupational Therapy"
+                        width={600}
+                        height={400}
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}
                     {index === 5 && (
-                      <img
+                      <Image
                         src="/images/medical-social.png"
                         alt="Speech Therapy"
+                        width={600}
+                        height={400}
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}
                     {index === 6 && (
-                      <img
+                      <Image
                         src="/images/home-health-aides.png"
                         alt="Home Health Aide"
+                        width={600}
+                        height={400}
                         className={`w-full ${imageHeightClass} object-cover rounded-lg sm:rounded-xl mb-3 sm:mb-4`}
                       />
                     )}

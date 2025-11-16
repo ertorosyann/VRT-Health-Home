@@ -19,9 +19,7 @@ export default function HomePage() {
         <div className="container-max text-center px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight animate-fade-in-up">
             {getHomeTranslation(locale, 'hero.title')}{' '}
-            <span className="text-health-600">
-              {getHomeTranslation(locale, 'hero.titleHighlight')}
-            </span>
+            {getHomeTranslation(locale, 'hero.titleHighlight')}
           </h1>
         </div>
       </section>
@@ -637,15 +635,6 @@ export default function HomePage() {
 
                   {/* Profile Section */}
                   <div className="flex items-center pt-4 border-t border-gray-100">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full mr-3 sm:mr-4 flex-shrink-0 overflow-hidden ring-2 ring-health-200">
-                      <Image
-                        src={testimonial.image || '/images/avatar2.jpg'}
-                        alt={testimonial.name}
-                        width={56}
-                        height={56}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 text-sm sm:text-base">
                         {testimonial.name}

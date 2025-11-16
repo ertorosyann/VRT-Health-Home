@@ -4,10 +4,10 @@ import nodemailer from 'nodemailer'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { firstName, lastName, email, phone, medicareNumber, service, message } = body
+    const { firstName, lastName, dateOfBirth, email, phone, medicareNumber, service, message } = body
 
     // Validate required fields
-    if (!firstName || !lastName || !medicareNumber || !message) {
+    if (!firstName || !lastName || !dateOfBirth || !medicareNumber) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -52,16 +52,19 @@ export async function POST(request: NextRequest) {
             
             <p><strong>First Name:</strong> ${firstName}</p>
             <p><strong>Last Name:</strong> ${lastName}</p>
+            <p><strong>Date of Birth:</strong> ${dateOfBirth}</p>
             ${email ? `<p><strong>Email:</strong> ${email}</p>` : ''}
             ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
             <p><strong>Medicare Number:</strong> ${medicareNumber}</p>
             ${service ? `<p><strong>Service of Interest:</strong> ${service}</p>` : ''}
           </div>
           
+          ${message ? `
           <div style="background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin-top: 20px;">
             <h3 style="color: #555; margin-top: 0;">Message</h3>
             <p style="white-space: pre-wrap;">${message}</p>
           </div>
+          ` : ''}
           
           <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; color: #777; font-size: 12px;">
             <p>This email was sent from the VRT Health Home contact form.</p>
@@ -75,13 +78,15 @@ export async function POST(request: NextRequest) {
         Contact Information:
         First Name: ${firstName}
         Last Name: ${lastName}
+        Date of Birth: ${dateOfBirth}
         ${email ? `Email: ${email}` : ''}
         ${phone ? `Phone: ${phone}` : ''}
         Medicare Number: ${medicareNumber}
         ${service ? `Service of Interest: ${service}` : ''}
-        
+        ${message ? `
         Message:
         ${message}
+        ` : ''}
         
         Submitted on: ${new Date().toLocaleString()}
       `,
