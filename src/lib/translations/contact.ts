@@ -29,7 +29,7 @@ export const contactTranslations = {
       title: 'Find Us',
       subtitle: 'Visit our office or contact us to learn more about our home healthcare services.',
       locationTitle: 'Our Office Location',
-      locationDescription: 'We\'re conveniently located in the heart of the city, making it easy for you to visit us and discuss your healthcare needs in person.',
+      
       address: 'Address',
       businessHours: 'Business Hours',
       businessHoursText: 'Monday - Friday: 10:00 AM - 4:00 PM',
@@ -109,7 +109,7 @@ export const contactTranslations = {
       title: '找到我们',
       subtitle: '访问我们的办公室或联系我们，了解更多关于我们居家医疗服务的信息。',
       locationTitle: '我们的办公地点',
-      locationDescription: '我们位于市中心，方便您访问我们并亲自讨论您的医疗需求。',
+      
       address: '地址',
       businessHours: '营业时间',
       businessHoursText: '周一至周五：上午8:00 - 下午6:00\n周六：上午9:00 - 下午2:00',
@@ -189,7 +189,7 @@ export const contactTranslations = {
       title: 'Encuéntrenos',
       subtitle: 'Visite nuestra oficina o contáctenos para obtener más información sobre nuestros servicios de atención médica domiciliaria.',
       locationTitle: 'Nuestra Ubicación de Oficina',
-      locationDescription: 'Estamos convenientemente ubicados en el corazón de la ciudad, facilitándole visitarnos y discutir sus necesidades de atención médica en persona.',
+      
       address: 'Dirección',
       businessHours: 'Horarios Comerciales',
       businessHoursText: 'Lunes - Viernes: 8:00 AM - 6:00 PM\nSábado: 9:00 AM - 2:00 PM',
@@ -269,7 +269,7 @@ export const contactTranslations = {
       title: 'Trouvez-nous',
       subtitle: 'Visitez notre bureau ou contactez-nous pour en savoir plus sur nos services de soins de santé à domicile.',
       locationTitle: 'Notre Emplacement de Bureau',
-      locationDescription: 'Nous sommes commodément situés au cœur de la ville, vous facilitant la visite et la discussion de vos besoins de soins de santé en personne.',
+      
       address: 'Adresse',
       businessHours: 'Heures d\'Ouverture',
       businessHoursText: 'Lundi - Vendredi : 8h00 - 18h00\nSamedi : 9h00 - 14h00',
@@ -349,7 +349,7 @@ export const contactTranslations = {
       title: 'Գտեք մեզ',
       subtitle: 'Այցելեք մեր գրասենյակ կամ կապվեք մեզ հետ՝ ավելին իմանալու մեր տնային առողջապահական ծառայությունների մասին:',
       locationTitle: 'Մեր գրասենյակի գտնվելու վայրը',
-      locationDescription: 'Մենք հարմարավետորեն գտնվում ենք քաղաքի կենտրոնում, հեշտացնելով ձեզ այցելել մեզ և անձամբ քննարկել ձեր առողջապահական կարիքները:',
+      
       address: 'Հասցե',
       businessHours: 'Գործարար ժամեր',
       businessHoursText: 'Երկուշաբթի - Ուրբաթ: 10:00 AM - 4:00 PM',
@@ -429,7 +429,7 @@ export const contactTranslations = {
       title: 'Найдите нас',
       subtitle: 'Посетите наш офис или свяжитесь с нами, чтобы узнать больше о наших услугах домашнего здравоохранения.',
       locationTitle: 'Местоположение нашего офиса',
-      locationDescription: 'Мы удобно расположены в центре города, что облегчает вам посещение нас и личное обсуждение ваших потребностей в здравоохранении.',
+      
       address: 'Адрес',
       businessHours: 'Рабочие Часы',
       businessHoursText: 'Понедельник - Пятница: 10:00 AM - 4:00 PM',

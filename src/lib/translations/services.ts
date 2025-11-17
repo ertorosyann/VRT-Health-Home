@@ -9,7 +9,7 @@ export const servicesTranslations = {
     services: [
         {
           title: 'Skilled Nurses',
-          description: 'Performs initial assessments thoroughly and comprehensively, in the privacy and comfort of the patient\'s resident. Develops care plan and follow-up visits until optimum recovery is attained.',
+          description: 'Performs initial assessments thoroughly and comprehensively, in the privacy and comfort of the patient\'s resident. Develops care plan and follow-up visits until optimum recovery is attained. Our licensed professionals can help with Wound Care, IV therapy, Administering medication, changing dressings, drawing blood, monitoring vitals and educating patient and their families about their condition and care plan.',
           features: [
             'Comprehensive initial assessments',
             'Personalized care plan development',
@@ -17,6 +17,18 @@ export const servicesTranslations = {
             'Private and comfortable home environment',
             'Professional nursing expertise',
             'Continuous monitoring and adjustment',
+            'Assessing each patient\'s needs and working closely with physicians to create a personalized care plan',
+            'Helping patients with daily activities like bathing, grooming, mobility, and eating',
+            'Monitoring patient symptoms and noting changes in the patient\'s condition, including shifts in their appetite, mobility, mood, and cognitive function',
+            'Administering medication and keeping detailed records about side effects and any changes in medication dosage or timing',
+            'Drawing blood for lab testing and collecting other specimens as ordered by the physician',
+            'Providing wound care, including cleaning, dressing, and monitoring wounds for signs of infection',
+            'Regularly communicating with other medical professionals to ensure everyone is on the same page regarding the patient\'s care',
+            'Performing physical assessments in the patient\'s home to identify new or evolving medical conditions',
+            'Teaching patients and their caregivers how to manage medications, follow treatment plans, and handle symptoms',
+            'Making sure all care follows clinical standards and is documented clearly and correctly',
+            'Using electronic health records (EHR) systems or other software to record and assess clinical data',
+            'Offering emotional support and guidance to patients and families during challenging times',
           ],
         },
         {
@@ -94,7 +106,7 @@ export const servicesTranslations = {
     ],
     whoNeedsCare: {
       title: 'WHO NEEDS HOME CARE?',
-      subtitle: 'Home healthcare services are available for individuals who meet specific criteria and have a physician\'s prescription.',
+      subtitle: 'Home healthcare services are available for individuals who meet specific criteria and have a physician\'s referral.',
       criteria: [
         'Anyone who is ill',
         'Recently discharged from the hospital',
@@ -125,7 +137,7 @@ export const servicesTranslations = {
           description: 'Self-payment option for those without insurance coverage'
         }
       ],
-      requirement: 'A physician prescription is required for all home healthcare services.'
+      requirement: 'A physician referral is required for all home healthcare services.'
     },
     process: {
       title: 'How Our Services Work',
@@ -186,7 +198,7 @@ export const servicesTranslations = {
     services: [
         {
           title: '专业护士',
-          description: '在患者居住的私密和舒适环境中，全面彻底地进行初步评估。制定护理计划并进行随访，直到达到最佳康复效果。',
+          description: '在患者居住的私密和舒适环境中，全面彻底地进行初步评估。制定护理计划并进行随访，直到达到最佳康复效果。我们的持证专业人员可以帮助进行伤口护理、静脉治疗、给药、更换敷料、抽血、监测生命体征，并教育患者及其家属了解他们的病情和护理计划。',
           features: [
             '全面初步评估',
             '个性化护理计划制定',
@@ -194,6 +206,18 @@ export const servicesTranslations = {
             '私密舒适的家庭环境',
             '专业护理技能',
             '持续监测和调整',
+            '评估每位患者的需求，与医生密切合作制定个性化护理计划',
+            '帮助患者进行日常活动，如洗澡、梳洗、行动和进食',
+            '监测患者症状并记录患者状况的变化，包括食欲、行动能力、情绪和认知功能的变化',
+            '给药并详细记录副作用以及药物剂量或时间安排的任何变化',
+            '按医生指示抽血进行实验室检测并收集其他标本',
+            '提供伤口护理，包括清洁、包扎和监测伤口是否有感染迹象',
+            '定期与其他医疗专业人员沟通，确保每个人对患者的护理保持一致',
+            '在患者家中进行身体评估，以识别新的或不断发展的医疗状况',
+            '教导患者及其护理人员如何管理药物、遵循治疗计划和处理症状',
+            '确保所有护理遵循临床标准并清晰正确地记录',
+            '使用电子健康记录（EHR）系统或其他软件记录和评估临床数据',
+            '在困难时期为患者和家属提供情感支持和指导',
           ],
         },
         {
@@ -271,7 +295,7 @@ export const servicesTranslations = {
     ],
     whoNeedsCare: {
       title: '谁需要居家护理？',
-      subtitle: '居家医疗服务适用于符合特定标准并有医生处方的个人。',
+      subtitle: '居家医疗服务适用于符合特定标准并有医生转诊的个人。',
       criteria: [
         '任何患病的人',
         '最近从医院出院的人',
@@ -302,7 +326,7 @@ export const servicesTranslations = {
           description: '为没有保险覆盖的人提供的自费选择'
         }
       ],
-      requirement: '所有居家医疗服务都需要医生处方。'
+      requirement: '所有居家医疗服务都需要医生转诊。'
     },
     process: {
       title: '我们的服务如何运作',
@@ -363,7 +387,7 @@ export const servicesTranslations = {
     services: [
         {
           title: 'Enfermeras Especializadas',
-          description: 'Realiza evaluaciones iniciales de manera exhaustiva y completa, en la privacidad y comodidad del residente del paciente. Desarrolla plan de cuidado y visitas de seguimiento hasta alcanzar la recuperación óptima.',
+          description: 'Realiza evaluaciones iniciales de manera exhaustiva y completa, en la privacidad y comodidad del residente del paciente. Desarrolla plan de cuidado y visitas de seguimiento hasta alcanzar la recuperación óptima. Nuestros profesionales con licencia pueden ayudar con cuidado de heridas, terapia IV, administración de medicamentos, cambio de vendajes, extracción de sangre, monitoreo de signos vitales y educación de pacientes y sus familias sobre su condición y plan de cuidado.',
           features: [
             'Evaluaciones iniciales exhaustivas',
             'Desarrollo de plan de cuidado personalizado',
@@ -371,6 +395,18 @@ export const servicesTranslations = {
             'Ambiente privado y cómodo en el hogar',
             'Experiencia profesional de enfermería',
             'Monitoreo y ajuste continuo',
+            'Evaluar las necesidades de cada paciente y trabajar en estrecha colaboración con los médicos para crear un plan de atención personalizado',
+            'Ayudar a los pacientes con actividades diarias como bañarse, arreglarse, movilidad y comer',
+            'Monitorear los síntomas del paciente y notar cambios en la condición del paciente, incluidos cambios en su apetito, movilidad, estado de ánimo y función cognitiva',
+            'Administrar medicamentos y mantener registros detallados sobre efectos secundarios y cualquier cambio en la dosis o el momento de la medicación',
+            'Extraer sangre para pruebas de laboratorio y recolectar otras muestras según lo ordenado por el médico',
+            'Proporcionar cuidado de heridas, incluyendo limpieza, vendaje y monitoreo de heridas para detectar signos de infección',
+            'Comunicarse regularmente con otros profesionales médicos para asegurar que todos estén en la misma página con respecto al cuidado del paciente',
+            'Realizar evaluaciones físicas en el hogar del paciente para identificar condiciones médicas nuevas o en evolución',
+            'Enseñar a los pacientes y sus cuidadores cómo manejar medicamentos, seguir planes de tratamiento y manejar síntomas',
+            'Asegurar que toda la atención siga los estándares clínicos y esté documentada de manera clara y correcta',
+            'Usar sistemas de registros de salud electrónicos (EHR) u otro software para registrar y evaluar datos clínicos',
+            'Ofrecer apoyo emocional y orientación a pacientes y familias durante tiempos desafiantes',
           ],
         },
         {
@@ -448,7 +484,7 @@ export const servicesTranslations = {
     ],
     whoNeedsCare: {
       title: '¿QUIÉN NECESITA CUIDADO EN CASA?',
-      subtitle: 'Los servicios de atención médica domiciliaria están disponibles para personas que cumplen criterios específicos y tienen una receta médica.',
+      subtitle: 'Los servicios de atención médica domiciliaria están disponibles para personas que cumplen criterios específicos y tienen una referencia médica.',
       criteria: [
         'Cualquier persona que esté enferma',
         'Recientemente dada de alta del hospital',
@@ -479,7 +515,7 @@ export const servicesTranslations = {
           description: 'Opción de pago propio para aquellos sin cobertura de seguro'
         }
       ],
-      requirement: 'Se requiere una receta médica para todos los servicios de atención médica domiciliaria.'
+      requirement: 'Se requiere una referencia médica para todos los servicios de atención médica domiciliaria.'
     },
     process: {
       title: 'Cómo Funcionan Nuestros Servicios',
@@ -540,7 +576,7 @@ export const servicesTranslations = {
     services: [
         {
           title: 'Infirmières Spécialisées',
-          description: 'Effectue des évaluations initiales de manière approfondie et complète, dans l\'intimité et le confort du domicile du patient. Développe un plan de soins et des visites de suivi jusqu\'à atteindre une récupération optimale.',
+          description: 'Effectue des évaluations initiales de manière approfondie et complète, dans l\'intimité et le confort du domicile du patient. Développe un plan de soins et des visites de suivi jusqu\'à atteindre une récupération optimale. Nos professionnels autorisés peuvent aider avec les soins de plaies, la thérapie IV, l\'administration de médicaments, le changement de pansements, le prélèvement sanguin, la surveillance des signes vitaux et l\'éducation des patients et de leurs familles sur leur état et leur plan de soins.',
           features: [
             'Évaluations initiales complètes',
             'Développement de plan de soins personnalisé',
@@ -548,6 +584,18 @@ export const servicesTranslations = {
             'Environnement privé et confortable à domicile',
             'Expertise infirmière professionnelle',
             'Surveillance et ajustement continus',
+            'Évaluer les besoins de chaque patient et travailler en étroite collaboration avec les médecins pour créer un plan de soins personnalisé',
+            'Aider les patients avec les activités quotidiennes comme se baigner, se toiletter, la mobilité et manger',
+            'Surveiller les symptômes du patient et noter les changements dans l\'état du patient, y compris les changements dans leur appétit, mobilité, humeur et fonction cognitive',
+            'Administrer des médicaments et tenir des registres détaillés sur les effets secondaires et tout changement dans la posologie ou le moment de la médication',
+            'Prélever du sang pour les tests de laboratoire et collecter d\'autres échantillons selon les ordres du médecin',
+            'Fournir des soins de plaies, y compris le nettoyage, le pansement et la surveillance des plaies pour détecter les signes d\'infection',
+            'Communiquer régulièrement avec d\'autres professionnels de la santé pour s\'assurer que tout le monde est sur la même longueur d\'onde concernant les soins du patient',
+            'Effectuer des évaluations physiques au domicile du patient pour identifier de nouvelles conditions médicales ou en évolution',
+            'Enseigner aux patients et à leurs soignants comment gérer les médicaments, suivre les plans de traitement et gérer les symptômes',
+            'S\'assurer que tous les soins suivent les normes cliniques et sont documentés clairement et correctement',
+            'Utiliser des systèmes de dossiers de santé électroniques (DSE) ou d\'autres logiciels pour enregistrer et évaluer les données cliniques',
+            'Offrir un soutien émotionnel et des conseils aux patients et aux familles pendant les moments difficiles',
           ],
         },
         {
@@ -625,7 +673,7 @@ export const servicesTranslations = {
     ],
     whoNeedsCare: {
       title: 'QUI A BESOIN DE SOINS À DOMICILE ?',
-      subtitle: 'Les services de soins de santé à domicile sont disponibles pour les personnes qui répondent à des critères spécifiques et ont une ordonnance médicale.',
+      subtitle: 'Les services de soins de santé à domicile sont disponibles pour les personnes qui répondent à des critères spécifiques et ont une référence médicale.',
       criteria: [
         'Toute personne malade',
         'Récemment sortie de l\'hôpital',
@@ -656,7 +704,7 @@ export const servicesTranslations = {
           description: 'Option d\'auto-paiement pour ceux sans couverture d\'assurance'
         }
       ],
-      requirement: 'Une ordonnance médicale est requise pour tous les services de soins de santé à domicile.'
+      requirement: 'Une référence médicale est requise pour tous les services de soins de santé à domicile.'
     },
     process: {
       title: 'Comment Nos Services Fonctionnent',
@@ -717,7 +765,7 @@ export const servicesTranslations = {
     services: [
       {
         title: 'Հմուտ Բուժքույրեր',
-        description: 'Կատարում է նախնական գնահատումներ մանրակրկիտ և համապարփակ, հիվանդի բնակարանի գաղտնիության և հարմարավետության մեջ: Մշակում է խնամքի ծրագիր և հետագա այցեր մինչև օպտիմալ վերականգնում:',
+        description: 'Կատարում է նախնական գնահատումներ մանրակրկիտ և համապարփակ, հիվանդի բնակարանի գաղտնիության և հարմարավետության մեջ: Մշակում է խնամքի ծրագիր և հետագա այցեր մինչև օպտիմալ վերականգնում: Մեր լիցենզավորված մասնագետները կարող են օգնել վերքի խնամք, IV թերապիա, դեղերի նշանակում, վիրակապերի փոխարինում, արյուն վերցնել, կենսական ցուցանիշների մոնիտորինգ և հիվանդների և նրանց ընտանիքների կրթություն նրանց վիճակի և խնամքի ծրագրի մասին:',
         features: [
           'Համապարփակ նախնական գնահատումներ',
           'Անհատականացված խնամքի ծրագրի մշակում',
@@ -725,6 +773,18 @@ export const servicesTranslations = {
           'Մասնավոր և հարմարավետ տնային միջավայր',
           'Պրոֆեսիոնալ բուժքույրական փորձառություն',
           'Շարունակական մոնիտորինգ և ճշգրտում',
+          'Գնահատել յուրաքանչյուր հիվանդի կարիքները և սերտորեն համագործակցել բժիշկների հետ անհատականացված խնամքի ծրագիր ստեղծելու համար',
+          'Օգնել հիվանդներին ամենօրյա գործողություններում, ինչպիսիք են լոգանքը, զարդարվելը, շարժունակությունը և ուտելը',
+          'Մոնիտորինգ անել հիվանդի ախտանիշները և նշել հիվանդի վիճակի փոփոխությունները, ներառյալ նրանց ախորժակի, շարժունակության, տրամադրության և ճանաչողական ֆունկցիայի փոփոխությունները',
+          'Դեղեր նշանակել և մանրամասն գրառումներ պահել կողմնակի ազդեցությունների և դեղերի դեղաչափի կամ ժամանակի ցանկացած փոփոխությունների մասին',
+          'Արյուն վերցնել լաբորատոր թեստավորման համար և հավաքել այլ նմուշներ բժշկի հրամանով',
+          'Ապահովել վերքի խնամք, ներառյալ մաքրում, վիրակապում և վերքերի մոնիտորինգ վարակի նշանների համար',
+          'Կանոնավոր հաղորդակցվել այլ բժշկական մասնագետների հետ՝ ապահովելու համար, որ բոլորը նույն էջում են հիվանդի խնամքի վերաբերյալ',
+          'Կատարել ֆիզիկական գնահատումներ հիվանդի տանը՝ նոր կամ զարգացող բժշկական վիճակներ բացահայտելու համար',
+          'Ուսուցանել հիվանդներին և նրանց խնամակալներին, թե ինչպես կառավարել դեղերը, հետևել բուժման ծրագրերին և կարգավորել ախտանիշները',
+          'Ապահովել, որ բոլոր խնամքը հետևում է կլինիկական ստանդարտներին և փաստաթղթավորված է հստակ և ճիշտ',
+          'Օգտագործել էլեկտրոնային առողջության գրառումների (EHR) համակարգեր կամ այլ ծրագրակազմ՝ կլինիկական տվյալները գրանցելու և գնահատելու համար',
+          'Առաջարկել հուզական աջակցություն և ուղղորդում հիվանդներին և ընտանիքներին դժվար ժամանակներին',
         ],
       },
       {
@@ -802,7 +862,7 @@ export const servicesTranslations = {
     ],
     whoNeedsCare: {
       title: 'Ո՞Վ Է ԿԱՐԻՔ ՏՆԱՅԻՆ ԽՆԱՄՔԻ',
-      subtitle: 'Տնային առողջապահական ծառայությունները հասանելի են այն անձանց համար, ովքեր համապատասխանում են հատուկ չափանիշներին և ունեն բժշկի դեղատոմս:',
+      subtitle: 'Տնային առողջապահական ծառայությունները հասանելի են այն անձանց համար, ովքեր համապատասխանում են հատուկ չափանիշներին և ունեն բժշկի ուղղորդում:',
       criteria: [
         'Յուրաքանչյուր ոք, ով հիվանդ է',
         'Վերջերս հիվանդանոցից դուրս գրված',
@@ -833,7 +893,7 @@ export const servicesTranslations = {
           description: 'Ինքնավճարման տարբերակ ապահովագրական ծածկույթ չունեցողների համար',
         },
       ],
-      requirement: 'Բժշկական դեղատոմս պահանջվում է բոլոր տնային առողջապահական ծառայությունների համար:',
+      requirement: 'Բժշկական ուղղորդում պահանջվում է բոլոր տնային առողջապահական ծառայությունների համար:',
     },
     process: {
       title: 'Ինչպես են աշխատում մեր ծառայությունները',
@@ -894,7 +954,7 @@ export const servicesTranslations = {
     services: [
       {
         title: 'Квалифицированные Медсестры',
-        description: 'Выполняет первоначальные оценки тщательно и всесторонне, в уединении и комфорте резиденции пациента. Разрабатывает план ухода и последующие визиты до достижения оптимального восстановления.',
+        description: 'Выполняет первоначальные оценки тщательно и всесторонне, в уединении и комфорте резиденции пациента. Разрабатывает план ухода и последующие визиты до достижения оптимального восстановления. Наши лицензированные специалисты могут помочь с уходом за ранами, внутривенной терапией, введением лекарств, сменой повязок, забором крови, мониторингом жизненно важных показателей и обучением пациентов и их семей об их состоянии и плане ухода.',
         features: [
           'Всесторонние первоначальные оценки',
           'Разработка персонализированного плана ухода',
@@ -902,6 +962,18 @@ export const servicesTranslations = {
           'Частная и комфортная домашняя обстановка',
           'Профессиональный сестринский опыт',
           'Непрерывный мониторинг и корректировка',
+          'Оценка потребностей каждого пациента и тесное сотрудничество с врачами для создания персонализированного плана ухода',
+          'Помощь пациентам в повседневных действиях, таких как купание, уход за собой, мобильность и питание',
+          'Мониторинг симптомов пациента и отслеживание изменений в состоянии пациента, включая изменения аппетита, мобильности, настроения и когнитивных функций',
+          'Введение лекарств и ведение подробных записей о побочных эффектах и любых изменениях в дозировке или времени приема лекарств',
+          'Забор крови для лабораторных анализов и сбор других образцов по назначению врача',
+          'Оказание ухода за ранами, включая очистку, перевязку и мониторинг ран на наличие признаков инфекции',
+          'Регулярное общение с другими медицинскими специалистами для обеспечения согласованности в уходе за пациентом',
+          'Проведение физических оценок в доме пациента для выявления новых или развивающихся медицинских состояний',
+          'Обучение пациентов и их опекунов тому, как управлять лекарствами, следовать планам лечения и справляться с симптомами',
+          'Обеспечение того, чтобы весь уход соответствовал клиническим стандартам и был четко и правильно задокументирован',
+          'Использование систем электронных медицинских карт (EHR) или другого программного обеспечения для записи и оценки клинических данных',
+          'Предоставление эмоциональной поддержки и руководства пациентам и семьям в трудные времена',
         ],
       },
       {
@@ -979,7 +1051,7 @@ export const servicesTranslations = {
     ],
     whoNeedsCare: {
       title: 'КТО НУЖДАЕТСЯ В ДОМАШНЕМ УХОДЕ?',
-      subtitle: 'Услуги домашнего здравоохранения доступны для лиц, которые соответствуют определенным критериям и имеют рецепт врача.',
+      subtitle: 'Услуги домашнего здравоохранения доступны для лиц, которые соответствуют определенным критериям и имеют направление врача.',
       criteria: [
         'Любой, кто болен',
         'Недавно выписан из больницы',
@@ -1010,7 +1082,7 @@ export const servicesTranslations = {
           description: 'Вариант самооплаты для тех, у кого нет страхового покрытия',
         },
       ],
-      requirement: 'Рецепт врача требуется для всех услуг домашнего здравоохранения.',
+      requirement: 'Направление врача требуется для всех услуг домашнего здравоохранения.',
     },
     process: {
       title: 'Как работают наши услуги',

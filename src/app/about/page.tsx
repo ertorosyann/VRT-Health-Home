@@ -17,6 +17,10 @@ export default function About() {
       image: '/carusel/c1.jpg',
     },
     {
+      name: 'Dr. Sarah Williams',
+      image: '/carusel/c10.jpg',
+    },
+    {
       name: 'Michael Rodriguez',
       image: '/carusel/c2.jpg',
     },

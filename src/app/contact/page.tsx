@@ -208,9 +208,6 @@ export default function Contact() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {getContactTranslation(locale, 'map.locationTitle')}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {getContactTranslation(locale, 'map.locationDescription')}
-                    </p>
                   </div>
 
                   <div className="space-y-4">

@@ -115,10 +115,10 @@ export default function Services() {
               // Create varying sizes: some cards span 2 columns, some span 1, some span 2 rows
               const getGridClasses = () => {
                 const patterns = [
-                  'lg:col-span-2 lg:row-span-1', // index 0: wide
                   'lg:col-span-1 lg:row-span-2', // index 1: tall
-                  'lg:col-span-1 lg:row-span-1', // index 2: small
+                  'lg:col-span-2 lg:row-span-1', // index 0: wide
                   'lg:col-span-2 lg:row-span-1', // index 3: wide
+                  'lg:col-span-1 lg:row-span-1', // index 2: small
                   'lg:col-span-1 lg:row-span-1', // index 4: small
                   'lg:col-span-1 lg:row-span-2', // index 5: tall
                   'lg:col-span-2 lg:row-span-1', // index 6: wide

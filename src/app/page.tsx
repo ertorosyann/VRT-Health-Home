@@ -313,7 +313,10 @@ export default function HomePage() {
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 px-4 sm:px-0">
             {/* Nursing Care */}
-            <div className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]">
+            <Link
+              href="/services#nursing-care"
+              className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
+            >
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-health-100 to-health-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-white group-hover:to-white transition-all duration-300 shadow-md group-hover:shadow-lg p-2">
                 <Image
                   src="/images/nursing-care.svg"
@@ -326,10 +329,11 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.nursingCare')}
               </h3>
-            </div>
+            </Link>
 
             {/* Physical Therapy */}
-            <div
+            <Link
+              href="/services#physical-therapy"
               className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.1s' }}
             >
@@ -345,10 +349,11 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.physicalTherapy')}
               </h3>
-            </div>
+            </Link>
 
             {/* Occupational Therapy */}
-            <div
+            <Link
+              href="/services#occupational-therapy"
               className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.2s' }}
             >
@@ -364,10 +369,11 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.occupationalTherapy')}
               </h3>
-            </div>
+            </Link>
 
             {/* Speech Therapy */}
-            <div
+            <Link
+              href="/services#speech-therapy"
               className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.3s' }}
             >
@@ -383,10 +389,11 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.speechTherapy')}
               </h3>
-            </div>
+            </Link>
 
             {/* Personal Care */}
-            <div
+            <Link
+              href="/services#personal-care"
               className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.4s' }}
             >
@@ -402,10 +409,11 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.personalCare')}
               </h3>
-            </div>
+            </Link>
 
             {/* Dietician */}
-            <div
+            <Link
+              href="/services#dietician"
               className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.5s' }}
             >
@@ -421,10 +429,11 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.dietician')}
               </h3>
-            </div>
+            </Link>
 
             {/* Medical Social Services */}
-            <div
+            <Link
+              href="/services#medical-social-services"
               className="text-center p-5 sm:p-6 rounded-2xl bg-white border-2 border-gray-100 hover:border-health-500 hover:bg-gradient-to-br hover:from-health-600 hover:to-health-700 hover:text-white transition-all duration-300 group cursor-pointer transform hover:scale-105 hover:shadow-xl animate-fade-in-up w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
               style={{ animationDelay: '0.6s' }}
             >
@@ -440,7 +449,7 @@ export default function HomePage() {
               <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 group-hover:text-white transition-colors duration-300 leading-tight">
                 {getMainTranslation(locale, 'footer.medicalSocialServices')}
               </h3>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

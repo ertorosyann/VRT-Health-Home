@@ -49,6 +49,11 @@ interface DoctorCarouselProps {
 const defaultDoctors: Doctor[] = [
   {
     id: 1,
+    image: '/carusel/c10.jpg',
+    alt: 'Professional home health care nurse providing compassionate care to patient at home',
+  },
+  {
+    id: 2,
     image: '/carusel/c1.jpg',
     alt: 'Professional home health care nurse providing compassionate care to patient at home',
   },
@@ -58,17 +63,17 @@ const defaultDoctors: Doctor[] = [
     alt: 'Experienced healthcare professional delivering home health care services',
   },
   {
-    id: 8,
+    id: 4,
     image: '/carusel/c8.jpg',
     alt: 'Qualified home health care provider assisting patient with medical care',
   },
   {
-    id: 2,
+    id: 5,
     image: '/carusel/c2.jpg',
     alt: 'Skilled nursing care professional providing home health services',
   },
   {
-    id: 4,
+    id: 6,
     image: '/carusel/c4.webp',
     alt: 'Home health care team member delivering personalized healthcare at home',
   },
@@ -78,12 +83,12 @@ const defaultDoctors: Doctor[] = [
     alt: 'Certified home health aide providing quality home care services',
   },
   {
-    id: 5,
+    id: 8,
     image: '/carusel/c5.png',
     alt: 'Professional healthcare worker offering home health care assistance',
   },
   {
-    id: 6,
+    id: 9,
     image: '/carusel/c6.png',
     alt: 'Compassionate home health care professional supporting patient wellness',
   },
@@ -173,11 +178,12 @@ export default function DoctorCarousel({ team }: DoctorCarouselProps) {
                   src={doctor.image}
                   alt={doctor.alt}
                   fill
-                  className="object-cover object-center transition-transform duration-700"
+                  className="object-cover object-center transition-transform duration-700 brightness-50"
                   priority={index === 0}
+                  style={{ filter: 'brightness(1.15) contrast(1.05)' }}
                 />
-                {/* Enhanced Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20"></div>
+                {/* Light Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10"></div>
               </div>
             </div>
           ))}
