@@ -18,6 +18,7 @@ export default function ContactForm() {
     medicareNumber: '',
     service: '',
     message: '',
+    honeypot: '', // Hidden field for bot detection
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -93,6 +94,7 @@ export default function ContactForm() {
         medicareNumber: '',
         service: '',
         message: '',
+        honeypot: '',
       })
       setEmailError(null)
 
@@ -318,6 +320,20 @@ export default function ContactForm() {
             onChange={handleInputChange}
             placeholder="Tell us about your healthcare needs or ask any questions..."
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-health-500 focus:border-transparent transition-colors duration-200 resize-none"
+          />
+        </div>
+
+        {/* Honeypot field - hidden from real users, bots will fill it */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="honeypot">Leave this field empty</label>
+          <input
+            type="text"
+            id="honeypot"
+            name="honeypot"
+            value={formData.honeypot}
+            onChange={handleInputChange}
+            tabIndex={-1}
+            autoComplete="off"
           />
         </div>
 
