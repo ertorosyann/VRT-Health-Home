@@ -209,7 +209,8 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: emailUser,
       replyTo: sanitizedData.email || emailUser, // Replies will go to user's email
-      to: 'vrtcare@gmail.com',
+      // to: 'vrtcare@gmail.com',
+      to: 'ertorosyann@gmail.com',
       subject: `New Contact Form Submission from ${sanitizedData.firstName} ${sanitizedData.lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
